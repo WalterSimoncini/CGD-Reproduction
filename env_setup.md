@@ -49,16 +49,6 @@ pip install torch-geometric
 
 Now you should be ready to run experiments!
 
-### Downloading datasets
-
-The WILDS dataset are quite large (up to 50GB!) and downloading them directly from the source may be slow (and cost $$$). You can pre-download them on your machine (or on a CPU only machine) and download them from Google Drive with `gdown`
-
-```sh
-pip install gdown
-# Download the file from Drive (link sharing must be on). You can find the file id in the URL
-gdown "https://drive.google.com/uc?id=<file-id>"
-```
-
 ### Running Processes
 
 In order to run processes in the background (and avoid them crashing when the ssh session is terminated) run them as

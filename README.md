@@ -5,7 +5,7 @@ This repository contains the results analysis and the environment configuration 
 The files are organized as follows:
 
 - `env_setup.md` contains instructions on how to setup an appropriate environment to run experiments
-- `experiments.md` contains commands to run all the experiments replicated in the study
+- `experiments.md` contains commands to run all the replicated experiments
 - `analysis.ipynb` contains code to replicate the report figures and tables (with the experimental results)
 - The code for running experiments can be found in the `wilds` folder
 
