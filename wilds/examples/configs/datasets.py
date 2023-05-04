@@ -63,7 +63,7 @@ dataset_defaults = {
         'batch_size': 32,
         'lr': 0.001,
         'weight_decay': 0.01,
-        'n_epochs': 5,
+        'n_epochs': 10,
         'n_groups_per_batch': 2,
         'irm_lambda': 1.0,
         'coral_penalty_weight': 0.1,
@@ -88,7 +88,6 @@ dataset_defaults = {
         'n_epochs': 10,  # This was adjusted from 200 because of lack of resources and adequate convergence
         'algo_log_metric': 'accuracy',
         'process_outputs_function': 'multiclass_logits_to_pred'
-
     },
     'civilcomments': {
         'split_scheme': 'official',
@@ -352,12 +351,11 @@ dataset_defaults = {
         'optimizer': 'SGD',
         'optimizer_kwargs': {'momentum':0.9},
         'scheduler': None,
-        'batch_size': 32,  # Adjusted from 128
+        'batch_size': 128,
         'lr': 1e-3,  # Adjusted from 1e-5
         'weight_decay': 0.1,  # Adjusted from 1, GDRO had 0.0001
-        'n_epochs': 10,  # This was adjusted from 300 because of lack of resources
+        'n_epochs': 300,
         'process_outputs_function': 'multiclass_logits_to_pred',
-
     },
     'yelp': {
         'split_scheme': 'official',
