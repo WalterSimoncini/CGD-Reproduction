@@ -63,7 +63,7 @@ dataset_defaults = {
         'batch_size': 32,
         'lr': 0.001,
         'weight_decay': 0.01,
-        'n_epochs': 10,
+        'n_epochs': 5,
         'n_groups_per_batch': 2,
         'irm_lambda': 1.0,
         'coral_penalty_weight': 0.1,
