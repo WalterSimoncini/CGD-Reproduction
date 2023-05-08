@@ -1,0 +1,1934 @@
+Dataset: cmnist
+Algorithm: CG
+Root dir: data
+Split scheme: official
+Dataset kwargs: {}
+Download: False
+Frac: 1.0
+Version: None
+Unlabeled split: None
+Unlabeled version: None
+Use unlabeled y: False
+Loader kwargs: {'num_workers': 4, 'pin_memory': True}
+Unlabeled loader kwargs: {'num_workers': 8, 'pin_memory': True}
+Train loader: standard
+Uniform over groups: True
+Distinct groups: True
+N groups per batch: 4
+Unlabeled n groups per batch: None
+Batch size: 32
+Unlabeled batch size: None
+Eval loader: standard
+Gradient accumulation steps: 1
+Model: resnet18
+Model kwargs: {'pretrained': True}
+Noisystudent add dropout: None
+Noisystudent dropout rate: None
+Pretrained model path: None
+Load featurizer only: False
+Teacher model path: None
+Transform: image_base
+Additional train transform: None
+Target resolution: (224, 224)
+Resize scale: 1.1428571428571428
+Max token length: None
+Randaugment n: None
+Loss function: cross_entropy
+Loss kwargs: {}
+Groupby fields: ['group']
+Group dro step size: None
+Coral penalty weight: None
+Dann penalty weight: None
+Dann classifier lr: None
+Dann featurizer lr: None
+Dann discriminator lr: None
+Afn penalty weight: None
+Safn delta r: None
+Hafn r: None
+Use hafn: False
+Irm lambda: None
+Irm penalty anneal iters: None
+Self training lambda: None
+Self training threshold: None
+Pseudolabel t2: None
+Soft pseudolabels: False
+Algo log metric: accuracy
+Process pseudolabels function: None
+Val metric: acc_wg
+Val metric decreasing: False
+N epochs: 10
+Optimizer: SGD
+Lr: 0.001
+Weight decay: 0.1
+Max grad norm: None
+Optimizer kwargs: {'momentum': 0.9}
+Scheduler: None
+Scheduler kwargs: {}
+Scheduler metric split: val
+Scheduler metric name: None
+Process outputs function: multiclass_logits_to_pred
+Evaluate all splits: True
+Eval splits: []
+Eval only: False
+Eval epoch: None
+Device: cuda
+Seed: 0
+Log dir: logs/cmnist/CG/run:0:seed:0:c:10
+Log every: 50
+Save step: None
+Save best: True
+Save last: True
+Save pred: True
+No group logging: False
+Progress bar: True
+Resume: False
+Use wandb: False
+Wandb api key path: None
+Wandb kwargs: {}
+Cg c: 10.0
+Cg step size: 0.05
+Pgi penalty weight: None
+Use data parallel: False
+
+Train data...
+    group =  majority: n = 49504
+    group =  minority: n = 495
+Validation data...
+    group =  majority: n = 5000
+    group =  minority: n = 5000
+Test data...
+    group =  majority: n = 5000
+    group =  minority: n = 5000
+
+Epoch [0]:
+
+Train:
+objective: 0.462
+loss_avg: 0.491
+acc_avg: 0.757
+  group =  majority  [n =    796]:	alpha: 0.400	loss: 0.618	acc: 0.631	
+  group =  minority  [n =    804]:	alpha: 0.601	loss: 0.365	acc: 0.882	
+objective: 0.173
+loss_avg: 0.183
+acc_avg: 0.938
+  group =  majority  [n =    798]:	alpha: 0.400	loss: 0.228	acc: 0.906	
+  group =  minority  [n =    802]:	alpha: 0.600	loss: 0.138	acc: 0.969	
+objective: 0.100
+loss_avg: 0.105
+acc_avg: 0.968
+  group =  majority  [n =    789]:	alpha: 0.402	loss: 0.134	acc: 0.954	
+  group =  minority  [n =    811]:	alpha: 0.598	loss: 0.078	acc: 0.980	
+objective: 0.073
+loss_avg: 0.079
+acc_avg: 0.974
+  group =  majority  [n =    817]:	alpha: 0.405	loss: 0.103	acc: 0.962	
+  group =  minority  [n =    783]:	alpha: 0.595	loss: 0.053	acc: 0.987	
+objective: 0.051
+loss_avg: 0.055
+acc_avg: 0.984
+  group =  majority  [n =    841]:	alpha: 0.407	loss: 0.067	acc: 0.981	
+  group =  minority  [n =    759]:	alpha: 0.593	loss: 0.040	acc: 0.988	
+objective: 0.044
+loss_avg: 0.045
+acc_avg: 0.985
+  group =  majority  [n =    796]:	alpha: 0.409	loss: 0.056	acc: 0.979	
+  group =  minority  [n =    804]:	alpha: 0.591	loss: 0.035	acc: 0.991	
+objective: 0.042
+loss_avg: 0.045
+acc_avg: 0.989
+  group =  majority  [n =    816]:	alpha: 0.410	loss: 0.062	acc: 0.982	
+  group =  minority  [n =    784]:	alpha: 0.590	loss: 0.028	acc: 0.996	
+objective: 0.037
+loss_avg: 0.040
+acc_avg: 0.988
+  group =  majority  [n =    808]:	alpha: 0.413	loss: 0.052	acc: 0.978	
+  group =  minority  [n =    792]:	alpha: 0.587	loss: 0.027	acc: 0.997	
+objective: 0.025
+loss_avg: 0.026
+acc_avg: 0.996
+  group =  majority  [n =    791]:	alpha: 0.415	loss: 0.033	acc: 0.991	
+  group =  minority  [n =    809]:	alpha: 0.585	loss: 0.019	acc: 1.000	
+objective: 0.026
+loss_avg: 0.030
+acc_avg: 0.993
+  group =  majority  [n =    805]:	alpha: 0.417	loss: 0.042	acc: 0.989	
+  group =  minority  [n =    795]:	alpha: 0.583	loss: 0.017	acc: 0.997	
+objective: 0.026
+loss_avg: 0.028
+acc_avg: 0.992
+  group =  majority  [n =    794]:	alpha: 0.418	loss: 0.034	acc: 0.987	
+  group =  minority  [n =    806]:	alpha: 0.582	loss: 0.023	acc: 0.998	
+objective: 0.028
+loss_avg: 0.029
+acc_avg: 0.991
+  group =  majority  [n =    786]:	alpha: 0.419	loss: 0.038	acc: 0.983	
+  group =  minority  [n =    814]:	alpha: 0.581	loss: 0.021	acc: 0.999	
+objective: 0.029
+loss_avg: 0.031
+acc_avg: 0.994
+  group =  majority  [n =    801]:	alpha: 0.420	loss: 0.040	acc: 0.989	
+  group =  minority  [n =    799]:	alpha: 0.580	loss: 0.022	acc: 0.999	
+objective: 0.020
+loss_avg: 0.021
+acc_avg: 0.997
+  group =  majority  [n =    833]:	alpha: 0.420	loss: 0.026	acc: 0.994	
+  group =  minority  [n =    767]:	alpha: 0.580	loss: 0.016	acc: 1.000	
+objective: 0.022
+loss_avg: 0.023
+acc_avg: 0.996
+  group =  majority  [n =    817]:	alpha: 0.421	loss: 0.031	acc: 0.993	
+  group =  minority  [n =    783]:	alpha: 0.579	loss: 0.015	acc: 1.000	
+objective: 0.018
+loss_avg: 0.019
+acc_avg: 0.998
+  group =  majority  [n =    818]:	alpha: 0.421	loss: 0.024	acc: 0.996	
+  group =  minority  [n =    782]:	alpha: 0.579	loss: 0.014	acc: 1.000	
+objective: 0.031
+loss_avg: 0.034
+acc_avg: 0.991
+  group =  majority  [n =    792]:	alpha: 0.422	loss: 0.045	acc: 0.986	
+  group =  minority  [n =    808]:	alpha: 0.578	loss: 0.024	acc: 0.996	
+objective: 0.042
+loss_avg: 0.043
+acc_avg: 0.991
+  group =  majority  [n =    779]:	alpha: 0.425	loss: 0.057	acc: 0.985	
+  group =  minority  [n =    821]:	alpha: 0.576	loss: 0.029	acc: 0.998	
+objective: 0.029
+loss_avg: 0.030
+acc_avg: 0.996
+  group =  majority  [n =    835]:	alpha: 0.425	loss: 0.038	acc: 0.994	
+  group =  minority  [n =    765]:	alpha: 0.574	loss: 0.022	acc: 0.999	
+objective: 0.023
+loss_avg: 0.024
+acc_avg: 0.998
+  group =  majority  [n =    798]:	alpha: 0.426	loss: 0.031	acc: 0.996	
+  group =  minority  [n =    802]:	alpha: 0.574	loss: 0.017	acc: 1.000	
+objective: 0.019
+loss_avg: 0.020
+acc_avg: 0.997
+  group =  majority  [n =    801]:	alpha: 0.426	loss: 0.023	acc: 0.995	
+  group =  minority  [n =    799]:	alpha: 0.574	loss: 0.016	acc: 0.999	
+objective: 0.026
+loss_avg: 0.027
+acc_avg: 0.995
+  group =  majority  [n =    801]:	alpha: 0.426	loss: 0.035	acc: 0.990	
+  group =  minority  [n =    799]:	alpha: 0.574	loss: 0.020	acc: 1.000	
+objective: 0.019
+loss_avg: 0.020
+acc_avg: 0.999
+  group =  majority  [n =    815]:	alpha: 0.425	loss: 0.022	acc: 0.999	
+  group =  minority  [n =    785]:	alpha: 0.575	loss: 0.018	acc: 1.000	
+objective: 0.023
+loss_avg: 0.025
+acc_avg: 0.996
+  group =  majority  [n =    840]:	alpha: 0.424	loss: 0.030	acc: 0.993	
+  group =  minority  [n =    760]:	alpha: 0.576	loss: 0.019	acc: 1.000	
+objective: 0.031
+loss_avg: 0.032
+acc_avg: 0.994
+  group =  majority  [n =    792]:	alpha: 0.424	loss: 0.037	acc: 0.992	
+  group =  minority  [n =    808]:	alpha: 0.576	loss: 0.028	acc: 0.996	
+objective: 0.036
+loss_avg: 0.038
+acc_avg: 0.993
+  group =  majority  [n =    808]:	alpha: 0.421	loss: 0.042	acc: 0.993	
+  group =  minority  [n =    792]:	alpha: 0.579	loss: 0.033	acc: 0.994	
+objective: 0.026
+loss_avg: 0.026
+acc_avg: 0.998
+  group =  majority  [n =    786]:	alpha: 0.420	loss: 0.031	acc: 0.997	
+  group =  minority  [n =    814]:	alpha: 0.580	loss: 0.022	acc: 0.999	
+objective: 0.025
+loss_avg: 0.026
+acc_avg: 0.997
+  group =  majority  [n =    815]:	alpha: 0.419	loss: 0.030	acc: 0.994	
+  group =  minority  [n =    785]:	alpha: 0.581	loss: 0.021	acc: 1.000	
+objective: 0.038
+loss_avg: 0.039
+acc_avg: 0.992
+  group =  majority  [n =    794]:	alpha: 0.418	loss: 0.050	acc: 0.986	
+  group =  minority  [n =    806]:	alpha: 0.582	loss: 0.029	acc: 0.998	
+objective: 0.038
+loss_avg: 0.040
+acc_avg: 0.995
+  group =  majority  [n =    776]:	alpha: 0.419	loss: 0.050	acc: 0.991	
+  group =  minority  [n =    824]:	alpha: 0.581	loss: 0.031	acc: 0.999	
+objective: 0.035
+loss_avg: 0.036
+acc_avg: 0.995
+  group =  majority  [n =    804]:	alpha: 0.419	loss: 0.042	acc: 0.991	
+  group =  minority  [n =    796]:	alpha: 0.581	loss: 0.030	acc: 0.999	
+objective: 0.074
+loss_avg: 0.078
+acc_avg: 0.980
+  group =  majority  [n =    215]:	alpha: 0.417	loss: 0.095	acc: 0.967	
+  group =  minority  [n =    184]:	alpha: 0.583	loss: 0.057	acc: 0.995	
+Epoch eval:
+Average acc: 0.983
+  group =  majority  [n =  25157]:	acc = 0.974
+  group =  minority  [n =  24842]:	acc = 0.992
+Worst-group acc: 0.974
+
+Validation:
+objective: 0.041
+loss_avg: 0.080
+acc_avg: 0.975
+  group =  majority  [n =   5000]:	alpha: 1.000	loss: 0.071	acc: 0.979	
+  group =  minority  [n =   5000]:	alpha: 1.000	loss: 0.089	acc: 0.970	
+Epoch eval:
+Average acc: 0.975
+  group =  majority  [n =   5000]:	acc = 0.979
+  group =  minority  [n =   5000]:	acc = 0.970
+Worst-group acc: 0.970
+Validation acc_wg: 0.970
+Epoch 0 has the best validation performance so far.
+
+
+Epoch [1]:
+
+Train:
+objective: 0.047
+loss_avg: 0.048
+acc_avg: 0.991
+  group =  majority  [n =    810]:	alpha: 0.419	loss: 0.060	acc: 0.984	
+  group =  minority  [n =    790]:	alpha: 0.581	loss: 0.035	acc: 0.997	
+objective: 0.051
+loss_avg: 0.052
+acc_avg: 0.989
+  group =  majority  [n =    791]:	alpha: 0.418	loss: 0.061	acc: 0.982	
+  group =  minority  [n =    809]:	alpha: 0.582	loss: 0.043	acc: 0.996	
+objective: 0.038
+loss_avg: 0.040
+acc_avg: 0.996
+  group =  majority  [n =    826]:	alpha: 0.416	loss: 0.048	acc: 0.994	
+  group =  minority  [n =    774]:	alpha: 0.584	loss: 0.032	acc: 0.999	
+objective: 0.036
+loss_avg: 0.037
+acc_avg: 0.994
+  group =  majority  [n =    786]:	alpha: 0.414	loss: 0.041	acc: 0.992	
+  group =  minority  [n =    814]:	alpha: 0.586	loss: 0.033	acc: 0.996	
+objective: 0.033
+loss_avg: 0.035
+acc_avg: 0.999
+  group =  majority  [n =    820]:	alpha: 0.412	loss: 0.041	acc: 0.999	
+  group =  minority  [n =    780]:	alpha: 0.588	loss: 0.029	acc: 1.000	
+objective: 0.038
+loss_avg: 0.040
+acc_avg: 0.997
+  group =  majority  [n =    793]:	alpha: 0.410	loss: 0.049	acc: 0.995	
+  group =  minority  [n =    807]:	alpha: 0.590	loss: 0.030	acc: 1.000	
+objective: 0.047
+loss_avg: 0.049
+acc_avg: 0.996
+  group =  majority  [n =    825]:	alpha: 0.408	loss: 0.055	acc: 0.994	
+  group =  minority  [n =    775]:	alpha: 0.592	loss: 0.042	acc: 0.999	
+objective: 0.058
+loss_avg: 0.057
+acc_avg: 0.992
+  group =  majority  [n =    802]:	alpha: 0.404	loss: 0.064	acc: 0.990	
+  group =  minority  [n =    798]:	alpha: 0.596	loss: 0.050	acc: 0.995	
+objective: 0.049
+loss_avg: 0.051
+acc_avg: 0.995
+  group =  majority  [n =    783]:	alpha: 0.402	loss: 0.062	acc: 0.992	
+  group =  minority  [n =    817]:	alpha: 0.598	loss: 0.040	acc: 0.998	
+objective: 0.049
+loss_avg: 0.051
+acc_avg: 0.996
+  group =  majority  [n =    796]:	alpha: 0.400	loss: 0.062	acc: 0.991	
+  group =  minority  [n =    804]:	alpha: 0.600	loss: 0.040	acc: 1.000	
+objective: 0.050
+loss_avg: 0.052
+acc_avg: 0.996
+  group =  majority  [n =    799]:	alpha: 0.398	loss: 0.059	acc: 0.994	
+  group =  minority  [n =    801]:	alpha: 0.602	loss: 0.045	acc: 0.999	
+objective: 0.054
+loss_avg: 0.055
+acc_avg: 0.994
+  group =  majority  [n =    773]:	alpha: 0.394	loss: 0.065	acc: 0.992	
+  group =  minority  [n =    827]:	alpha: 0.606	loss: 0.047	acc: 0.996	
+objective: 0.067
+loss_avg: 0.070
+acc_avg: 0.991
+  group =  majority  [n =    809]:	alpha: 0.392	loss: 0.084	acc: 0.984	
+  group =  minority  [n =    791]:	alpha: 0.608	loss: 0.057	acc: 0.997	
+objective: 0.056
+loss_avg: 0.058
+acc_avg: 0.996
+  group =  majority  [n =    806]:	alpha: 0.390	loss: 0.067	acc: 0.991	
+  group =  minority  [n =    794]:	alpha: 0.610	loss: 0.048	acc: 1.000	
+objective: 0.057
+loss_avg: 0.059
+acc_avg: 0.998
+  group =  majority  [n =    777]:	alpha: 0.387	loss: 0.065	acc: 0.996	
+  group =  minority  [n =    823]:	alpha: 0.613	loss: 0.053	acc: 1.000	
+objective: 0.088
+loss_avg: 0.092
+acc_avg: 0.980
+  group =  majority  [n =    795]:	alpha: 0.382	loss: 0.109	acc: 0.971	
+  group =  minority  [n =    805]:	alpha: 0.618	loss: 0.074	acc: 0.989	
+objective: 0.071
+loss_avg: 0.074
+acc_avg: 0.992
+  group =  majority  [n =    792]:	alpha: 0.379	loss: 0.088	acc: 0.986	
+  group =  minority  [n =    808]:	alpha: 0.621	loss: 0.061	acc: 0.999	
+objective: 0.078
+loss_avg: 0.082
+acc_avg: 0.992
+  group =  majority  [n =    812]:	alpha: 0.378	loss: 0.097	acc: 0.986	
+  group =  minority  [n =    788]:	alpha: 0.622	loss: 0.067	acc: 0.997	
+objective: 0.097
+loss_avg: 0.102
+acc_avg: 0.984
+  group =  majority  [n =    817]:	alpha: 0.375	loss: 0.122	acc: 0.973	
+  group =  minority  [n =    783]:	alpha: 0.625	loss: 0.081	acc: 0.995	
+objective: 0.085
+loss_avg: 0.090
+acc_avg: 0.989
+  group =  majority  [n =    823]:	alpha: 0.374	loss: 0.107	acc: 0.982	
+  group =  minority  [n =    777]:	alpha: 0.626	loss: 0.073	acc: 0.997	
+objective: 0.089
+loss_avg: 0.095
+acc_avg: 0.989
+  group =  majority  [n =    814]:	alpha: 0.371	loss: 0.113	acc: 0.982	
+  group =  minority  [n =    786]:	alpha: 0.629	loss: 0.076	acc: 0.997	
+objective: 0.084
+loss_avg: 0.088
+acc_avg: 0.994
+  group =  majority  [n =    812]:	alpha: 0.365	loss: 0.101	acc: 0.988	
+  group =  minority  [n =    788]:	alpha: 0.635	loss: 0.074	acc: 1.000	
+objective: 0.085
+loss_avg: 0.089
+acc_avg: 0.994
+  group =  majority  [n =    813]:	alpha: 0.359	loss: 0.101	acc: 0.989	
+  group =  minority  [n =    787]:	alpha: 0.641	loss: 0.076	acc: 1.000	
+objective: 0.084
+loss_avg: 0.088
+acc_avg: 0.997
+  group =  majority  [n =    794]:	alpha: 0.353	loss: 0.100	acc: 0.994	
+  group =  minority  [n =    806]:	alpha: 0.647	loss: 0.075	acc: 1.000	
+objective: 0.091
+loss_avg: 0.098
+acc_avg: 0.993
+  group =  majority  [n =    842]:	alpha: 0.348	loss: 0.117	acc: 0.987	
+  group =  minority  [n =    758]:	alpha: 0.652	loss: 0.077	acc: 1.000	
+objective: 0.094
+loss_avg: 0.099
+acc_avg: 0.991
+  group =  majority  [n =    818]:	alpha: 0.344	loss: 0.116	acc: 0.984	
+  group =  minority  [n =    782]:	alpha: 0.656	loss: 0.082	acc: 0.999	
+objective: 0.102
+loss_avg: 0.106
+acc_avg: 0.988
+  group =  majority  [n =    787]:	alpha: 0.341	loss: 0.125	acc: 0.977	
+  group =  minority  [n =    813]:	alpha: 0.659	loss: 0.088	acc: 0.998	
+objective: 0.110
+loss_avg: 0.117
+acc_avg: 0.991
+  group =  majority  [n =    785]:	alpha: 0.337	loss: 0.140	acc: 0.985	
+  group =  minority  [n =    815]:	alpha: 0.663	loss: 0.096	acc: 0.998	
+objective: 0.110
+loss_avg: 0.116
+acc_avg: 0.988
+  group =  majority  [n =    787]:	alpha: 0.334	loss: 0.137	acc: 0.980	
+  group =  minority  [n =    813]:	alpha: 0.666	loss: 0.095	acc: 0.996	
+objective: 0.116
+loss_avg: 0.124
+acc_avg: 0.988
+  group =  majority  [n =    777]:	alpha: 0.331	loss: 0.149	acc: 0.978	
+  group =  minority  [n =    823]:	alpha: 0.669	loss: 0.101	acc: 0.996	
+objective: 0.110
+loss_avg: 0.117
+acc_avg: 0.992
+  group =  majority  [n =    788]:	alpha: 0.327	loss: 0.139	acc: 0.987	
+  group =  minority  [n =    812]:	alpha: 0.673	loss: 0.095	acc: 0.998	
+objective: 0.113
+loss_avg: 0.120
+acc_avg: 0.990
+  group =  majority  [n =    189]:	alpha: 0.325	loss: 0.147	acc: 0.979	
+  group =  minority  [n =    210]:	alpha: 0.675	loss: 0.095	acc: 1.000	
+Epoch eval:
+Average acc: 0.992
+  group =  majority  [n =  25041]:	acc = 0.987
+  group =  minority  [n =  24958]:	acc = 0.998
+Worst-group acc: 0.987
+
+Validation:
+objective: 0.072
+loss_avg: 0.146
+acc_avg: 0.978
+  group =  majority  [n =   5000]:	alpha: 1.000	loss: 0.152	acc: 0.980	
+  group =  minority  [n =   5000]:	alpha: 0.995	loss: 0.140	acc: 0.977	
+Epoch eval:
+Average acc: 0.978
+  group =  majority  [n =   5000]:	acc = 0.980
+  group =  minority  [n =   5000]:	acc = 0.977
+Worst-group acc: 0.977
+Validation acc_wg: 0.977
+Epoch 1 has the best validation performance so far.
+
+
+Epoch [2]:
+
+Train:
+objective: 0.113
+loss_avg: 0.120
+acc_avg: 0.989
+  group =  majority  [n =    787]:	alpha: 0.325	loss: 0.144	acc: 0.978	
+  group =  minority  [n =    813]:	alpha: 0.675	loss: 0.097	acc: 0.999	
+objective: 0.126
+loss_avg: 0.137
+acc_avg: 0.978
+  group =  majority  [n =    792]:	alpha: 0.320	loss: 0.169	acc: 0.962	
+  group =  minority  [n =    808]:	alpha: 0.680	loss: 0.106	acc: 0.993	
+objective: 0.118
+loss_avg: 0.128
+acc_avg: 0.989
+  group =  majority  [n =    828]:	alpha: 0.319	loss: 0.151	acc: 0.982	
+  group =  minority  [n =    772]:	alpha: 0.681	loss: 0.104	acc: 0.997	
+objective: 0.126
+loss_avg: 0.135
+acc_avg: 0.986
+  group =  majority  [n =    796]:	alpha: 0.316	loss: 0.167	acc: 0.974	
+  group =  minority  [n =    804]:	alpha: 0.684	loss: 0.104	acc: 0.998	
+objective: 0.117
+loss_avg: 0.127
+acc_avg: 0.991
+  group =  majority  [n =    801]:	alpha: 0.313	loss: 0.150	acc: 0.981	
+  group =  minority  [n =    799]:	alpha: 0.687	loss: 0.104	acc: 1.000	
+objective: 0.114
+loss_avg: 0.127
+acc_avg: 0.991
+  group =  majority  [n =    855]:	alpha: 0.310	loss: 0.153	acc: 0.985	
+  group =  minority  [n =    745]:	alpha: 0.690	loss: 0.096	acc: 0.999	
+objective: 0.121
+loss_avg: 0.133
+acc_avg: 0.988
+  group =  majority  [n =    800]:	alpha: 0.307	loss: 0.162	acc: 0.979	
+  group =  minority  [n =    800]:	alpha: 0.693	loss: 0.104	acc: 0.996	
+objective: 0.124
+loss_avg: 0.139
+acc_avg: 0.984
+  group =  majority  [n =    816]:	alpha: 0.305	loss: 0.173	acc: 0.969	
+  group =  minority  [n =    784]:	alpha: 0.695	loss: 0.103	acc: 0.999	
+objective: 0.122
+loss_avg: 0.137
+acc_avg: 0.989
+  group =  majority  [n =    847]:	alpha: 0.304	loss: 0.168	acc: 0.985	
+  group =  minority  [n =    753]:	alpha: 0.696	loss: 0.103	acc: 0.995	
+objective: 0.149
+loss_avg: 0.164
+acc_avg: 0.971
+  group =  majority  [n =    801]:	alpha: 0.304	loss: 0.198	acc: 0.955	
+  group =  minority  [n =    799]:	alpha: 0.696	loss: 0.129	acc: 0.987	
+objective: 0.130
+loss_avg: 0.144
+acc_avg: 0.983
+  group =  majority  [n =    834]:	alpha: 0.300	loss: 0.173	acc: 0.971	
+  group =  minority  [n =    766]:	alpha: 0.700	loss: 0.112	acc: 0.996	
+objective: 0.123
+loss_avg: 0.134
+acc_avg: 0.991
+  group =  majority  [n =    800]:	alpha: 0.297	loss: 0.160	acc: 0.982	
+  group =  minority  [n =    800]:	alpha: 0.702	loss: 0.109	acc: 0.999	
+objective: 0.123
+loss_avg: 0.135
+acc_avg: 0.990
+  group =  majority  [n =    782]:	alpha: 0.294	loss: 0.167	acc: 0.981	
+  group =  minority  [n =    818]:	alpha: 0.706	loss: 0.105	acc: 0.999	
+objective: 0.129
+loss_avg: 0.143
+acc_avg: 0.985
+  group =  majority  [n =    801]:	alpha: 0.293	loss: 0.177	acc: 0.974	
+  group =  minority  [n =    799]:	alpha: 0.707	loss: 0.108	acc: 0.996	
+objective: 0.142
+loss_avg: 0.159
+acc_avg: 0.980
+  group =  majority  [n =    792]:	alpha: 0.295	loss: 0.202	acc: 0.961	
+  group =  minority  [n =    808]:	alpha: 0.705	loss: 0.117	acc: 0.999	
+objective: 0.136
+loss_avg: 0.151
+acc_avg: 0.986
+  group =  majority  [n =    819]:	alpha: 0.296	loss: 0.184	acc: 0.976	
+  group =  minority  [n =    781]:	alpha: 0.704	loss: 0.117	acc: 0.997	
+objective: 0.123
+loss_avg: 0.138
+acc_avg: 0.992
+  group =  majority  [n =    811]:	alpha: 0.293	loss: 0.171	acc: 0.984	
+  group =  minority  [n =    789]:	alpha: 0.707	loss: 0.104	acc: 1.000	
+objective: 0.126
+loss_avg: 0.136
+acc_avg: 0.992
+  group =  majority  [n =    769]:	alpha: 0.289	loss: 0.162	acc: 0.986	
+  group =  minority  [n =    831]:	alpha: 0.711	loss: 0.112	acc: 0.998	
+objective: 0.128
+loss_avg: 0.144
+acc_avg: 0.986
+  group =  majority  [n =    826]:	alpha: 0.285	loss: 0.175	acc: 0.977	
+  group =  minority  [n =    774]:	alpha: 0.715	loss: 0.110	acc: 0.995	
+objective: 0.120
+loss_avg: 0.133
+acc_avg: 0.993
+  group =  majority  [n =    812]:	alpha: 0.281	loss: 0.163	acc: 0.986	
+  group =  minority  [n =    788]:	alpha: 0.719	loss: 0.103	acc: 1.000	
+objective: 0.129
+loss_avg: 0.145
+acc_avg: 0.989
+  group =  majority  [n =    784]:	alpha: 0.279	loss: 0.182	acc: 0.980	
+  group =  minority  [n =    816]:	alpha: 0.721	loss: 0.110	acc: 0.998	
+objective: 0.134
+loss_avg: 0.152
+acc_avg: 0.981
+  group =  majority  [n =    799]:	alpha: 0.278	loss: 0.193	acc: 0.966	
+  group =  minority  [n =    801]:	alpha: 0.722	loss: 0.111	acc: 0.996	
+objective: 0.122
+loss_avg: 0.137
+acc_avg: 0.993
+  group =  majority  [n =    804]:	alpha: 0.277	loss: 0.171	acc: 0.986	
+  group =  minority  [n =    796]:	alpha: 0.723	loss: 0.104	acc: 1.000	
+objective: 0.125
+loss_avg: 0.140
+acc_avg: 0.992
+  group =  majority  [n =    799]:	alpha: 0.274	loss: 0.173	acc: 0.987	
+  group =  minority  [n =    801]:	alpha: 0.726	loss: 0.107	acc: 0.996	
+objective: 0.152
+loss_avg: 0.177
+acc_avg: 0.966
+  group =  majority  [n =    793]:	alpha: 0.277	loss: 0.229	acc: 0.939	
+  group =  minority  [n =    807]:	alpha: 0.723	loss: 0.125	acc: 0.993	
+objective: 0.149
+loss_avg: 0.173
+acc_avg: 0.971
+  group =  majority  [n =    824]:	alpha: 0.281	loss: 0.221	acc: 0.947	
+  group =  minority  [n =    776]:	alpha: 0.719	loss: 0.123	acc: 0.996	
+objective: 0.126
+loss_avg: 0.140
+acc_avg: 0.993
+  group =  majority  [n =    814]:	alpha: 0.281	loss: 0.171	acc: 0.986	
+  group =  minority  [n =    786]:	alpha: 0.719	loss: 0.109	acc: 0.999	
+objective: 0.127
+loss_avg: 0.143
+acc_avg: 0.988
+  group =  majority  [n =    800]:	alpha: 0.279	loss: 0.179	acc: 0.976	
+  group =  minority  [n =    800]:	alpha: 0.721	loss: 0.107	acc: 1.000	
+objective: 0.126
+loss_avg: 0.144
+acc_avg: 0.988
+  group =  majority  [n =    813]:	alpha: 0.278	loss: 0.181	acc: 0.977	
+  group =  minority  [n =    787]:	alpha: 0.723	loss: 0.106	acc: 0.999	
+objective: 0.121
+loss_avg: 0.138
+acc_avg: 0.991
+  group =  majority  [n =    780]:	alpha: 0.277	loss: 0.176	acc: 0.982	
+  group =  minority  [n =    820]:	alpha: 0.723	loss: 0.101	acc: 1.000	
+objective: 0.134
+loss_avg: 0.152
+acc_avg: 0.984
+  group =  majority  [n =    786]:	alpha: 0.275	loss: 0.194	acc: 0.968	
+  group =  minority  [n =    814]:	alpha: 0.725	loss: 0.111	acc: 0.999	
+objective: 0.128
+loss_avg: 0.142
+acc_avg: 0.992
+  group =  majority  [n =    195]:	alpha: 0.277	loss: 0.175	acc: 0.985	
+  group =  minority  [n =    204]:	alpha: 0.723	loss: 0.111	acc: 1.000	
+Epoch eval:
+Average acc: 0.986
+  group =  majority  [n =  25160]:	acc = 0.975
+  group =  minority  [n =  24839]:	acc = 0.997
+Worst-group acc: 0.975
+
+Validation:
+objective: 0.082
+loss_avg: 0.165
+acc_avg: 0.967
+  group =  majority  [n =   5000]:	alpha: 0.998	loss: 0.165	acc: 0.972	
+  group =  minority  [n =   5000]:	alpha: 1.000	loss: 0.164	acc: 0.961	
+Epoch eval:
+Average acc: 0.966
+  group =  majority  [n =   5000]:	acc = 0.972
+  group =  minority  [n =   5000]:	acc = 0.961
+Worst-group acc: 0.961
+Validation acc_wg: 0.961
+
+
+Epoch [3]:
+
+Train:
+objective: 0.139
+loss_avg: 0.160
+acc_avg: 0.974
+  group =  majority  [n =    789]:	alpha: 0.277	loss: 0.208	acc: 0.954	
+  group =  minority  [n =    811]:	alpha: 0.723	loss: 0.115	acc: 0.994	
+objective: 0.125
+loss_avg: 0.142
+acc_avg: 0.988
+  group =  majority  [n =    795]:	alpha: 0.279	loss: 0.179	acc: 0.977	
+  group =  minority  [n =    805]:	alpha: 0.721	loss: 0.105	acc: 0.999	
+objective: 0.125
+loss_avg: 0.143
+acc_avg: 0.990
+  group =  majority  [n =    820]:	alpha: 0.278	loss: 0.179	acc: 0.984	
+  group =  minority  [n =    780]:	alpha: 0.722	loss: 0.105	acc: 0.996	
+objective: 0.129
+loss_avg: 0.146
+acc_avg: 0.990
+  group =  majority  [n =    768]:	alpha: 0.279	loss: 0.188	acc: 0.979	
+  group =  minority  [n =    832]:	alpha: 0.721	loss: 0.107	acc: 1.000	
+objective: 0.120
+loss_avg: 0.137
+acc_avg: 0.992
+  group =  majority  [n =    818]:	alpha: 0.276	loss: 0.171	acc: 0.984	
+  group =  minority  [n =    782]:	alpha: 0.724	loss: 0.101	acc: 1.000	
+objective: 0.125
+loss_avg: 0.146
+acc_avg: 0.988
+  group =  majority  [n =    843]:	alpha: 0.277	loss: 0.185	acc: 0.977	
+  group =  minority  [n =    757]:	alpha: 0.723	loss: 0.102	acc: 1.000	
+objective: 0.124
+loss_avg: 0.145
+acc_avg: 0.988
+  group =  majority  [n =    814]:	alpha: 0.278	loss: 0.187	acc: 0.977	
+  group =  minority  [n =    786]:	alpha: 0.722	loss: 0.101	acc: 1.000	
+objective: 0.122
+loss_avg: 0.140
+acc_avg: 0.991
+  group =  majority  [n =    805]:	alpha: 0.279	loss: 0.178	acc: 0.984	
+  group =  minority  [n =    795]:	alpha: 0.721	loss: 0.102	acc: 0.997	
+objective: 0.132
+loss_avg: 0.150
+acc_avg: 0.981
+  group =  majority  [n =    798]:	alpha: 0.280	loss: 0.191	acc: 0.969	
+  group =  minority  [n =    802]:	alpha: 0.720	loss: 0.109	acc: 0.994	
+objective: 0.128
+loss_avg: 0.144
+acc_avg: 0.986
+  group =  majority  [n =    804]:	alpha: 0.282	loss: 0.180	acc: 0.973	
+  group =  minority  [n =    796]:	alpha: 0.718	loss: 0.108	acc: 0.999	
+objective: 0.130
+loss_avg: 0.147
+acc_avg: 0.985
+  group =  majority  [n =    821]:	alpha: 0.281	loss: 0.185	acc: 0.973	
+  group =  minority  [n =    779]:	alpha: 0.719	loss: 0.107	acc: 0.997	
+objective: 0.144
+loss_avg: 0.163
+acc_avg: 0.978
+  group =  majority  [n =    785]:	alpha: 0.283	loss: 0.207	acc: 0.958	
+  group =  minority  [n =    815]:	alpha: 0.717	loss: 0.119	acc: 0.996	
+objective: 0.131
+loss_avg: 0.143
+acc_avg: 0.986
+  group =  majority  [n =    762]:	alpha: 0.282	loss: 0.176	acc: 0.971	
+  group =  minority  [n =    838]:	alpha: 0.718	loss: 0.114	acc: 1.000	
+objective: 0.133
+loss_avg: 0.148
+acc_avg: 0.986
+  group =  majority  [n =    776]:	alpha: 0.280	loss: 0.185	acc: 0.974	
+  group =  minority  [n =    824]:	alpha: 0.720	loss: 0.113	acc: 0.998	
+objective: 0.134
+loss_avg: 0.151
+acc_avg: 0.982
+  group =  majority  [n =    807]:	alpha: 0.279	loss: 0.189	acc: 0.968	
+  group =  minority  [n =    793]:	alpha: 0.721	loss: 0.114	acc: 0.996	
+objective: 0.138
+loss_avg: 0.152
+acc_avg: 0.981
+  group =  majority  [n =    784]:	alpha: 0.281	loss: 0.186	acc: 0.964	
+  group =  minority  [n =    816]:	alpha: 0.719	loss: 0.118	acc: 0.996	
+objective: 0.126
+loss_avg: 0.145
+acc_avg: 0.983
+  group =  majority  [n =    789]:	alpha: 0.279	loss: 0.188	acc: 0.968	
+  group =  minority  [n =    811]:	alpha: 0.721	loss: 0.103	acc: 0.998	
+objective: 0.139
+loss_avg: 0.157
+acc_avg: 0.980
+  group =  majority  [n =    804]:	alpha: 0.281	loss: 0.195	acc: 0.969	
+  group =  minority  [n =    796]:	alpha: 0.719	loss: 0.118	acc: 0.991	
+objective: 0.135
+loss_avg: 0.154
+acc_avg: 0.982
+  group =  majority  [n =    817]:	alpha: 0.281	loss: 0.194	acc: 0.968	
+  group =  minority  [n =    783]:	alpha: 0.719	loss: 0.112	acc: 0.996	
+objective: 0.120
+loss_avg: 0.132
+acc_avg: 0.993
+  group =  majority  [n =    763]:	alpha: 0.278	loss: 0.163	acc: 0.987	
+  group =  minority  [n =    837]:	alpha: 0.722	loss: 0.103	acc: 0.999	
+objective: 0.122
+loss_avg: 0.139
+acc_avg: 0.992
+  group =  majority  [n =    816]:	alpha: 0.276	loss: 0.176	acc: 0.984	
+  group =  minority  [n =    784]:	alpha: 0.724	loss: 0.101	acc: 1.000	
+objective: 0.156
+loss_avg: 0.180
+acc_avg: 0.966
+  group =  majority  [n =    819]:	alpha: 0.278	loss: 0.230	acc: 0.945	
+  group =  minority  [n =    781]:	alpha: 0.722	loss: 0.128	acc: 0.987	
+objective: 0.143
+loss_avg: 0.161
+acc_avg: 0.978
+  group =  majority  [n =    808]:	alpha: 0.281	loss: 0.200	acc: 0.960	
+  group =  minority  [n =    792]:	alpha: 0.719	loss: 0.122	acc: 0.995	
+objective: 0.125
+loss_avg: 0.142
+acc_avg: 0.986
+  group =  majority  [n =    788]:	alpha: 0.279	loss: 0.178	acc: 0.975	
+  group =  minority  [n =    812]:	alpha: 0.721	loss: 0.107	acc: 0.998	
+objective: 0.137
+loss_avg: 0.152
+acc_avg: 0.983
+  group =  majority  [n =    792]:	alpha: 0.280	loss: 0.188	acc: 0.968	
+  group =  minority  [n =    808]:	alpha: 0.720	loss: 0.117	acc: 0.996	
+objective: 0.154
+loss_avg: 0.173
+acc_avg: 0.970
+  group =  majority  [n =    815]:	alpha: 0.280	loss: 0.212	acc: 0.956	
+  group =  minority  [n =    785]:	alpha: 0.720	loss: 0.132	acc: 0.985	
+objective: 0.132
+loss_avg: 0.149
+acc_avg: 0.985
+  group =  majority  [n =    793]:	alpha: 0.280	loss: 0.189	acc: 0.971	
+  group =  minority  [n =    807]:	alpha: 0.720	loss: 0.109	acc: 0.999	
+objective: 0.125
+loss_avg: 0.141
+acc_avg: 0.985
+  group =  majority  [n =    793]:	alpha: 0.279	loss: 0.178	acc: 0.971	
+  group =  minority  [n =    807]:	alpha: 0.721	loss: 0.104	acc: 0.999	
+objective: 0.123
+loss_avg: 0.139
+acc_avg: 0.987
+  group =  majority  [n =    768]:	alpha: 0.279	loss: 0.176	acc: 0.975	
+  group =  minority  [n =    832]:	alpha: 0.721	loss: 0.104	acc: 0.998	
+objective: 0.119
+loss_avg: 0.133
+acc_avg: 0.993
+  group =  majority  [n =    794]:	alpha: 0.276	loss: 0.168	acc: 0.986	
+  group =  minority  [n =    806]:	alpha: 0.724	loss: 0.099	acc: 1.000	
+objective: 0.132
+loss_avg: 0.148
+acc_avg: 0.982
+  group =  majority  [n =    779]:	alpha: 0.275	loss: 0.186	acc: 0.968	
+  group =  minority  [n =    821]:	alpha: 0.725	loss: 0.112	acc: 0.995	
+objective: 0.132
+loss_avg: 0.153
+acc_avg: 0.980
+  group =  majority  [n =    208]:	alpha: 0.277	loss: 0.196	acc: 0.962	
+  group =  minority  [n =    191]:	alpha: 0.723	loss: 0.106	acc: 1.000	
+Epoch eval:
+Average acc: 0.984
+  group =  majority  [n =  24935]:	acc = 0.971
+  group =  minority  [n =  25064]:	acc = 0.997
+Worst-group acc: 0.971
+
+Validation:
+objective: 0.081
+loss_avg: 0.179
+acc_avg: 0.966
+  group =  majority  [n =   5000]:	alpha: 1.000	loss: 0.220	acc: 0.956	
+  group =  minority  [n =   5000]:	alpha: 0.999	loss: 0.138	acc: 0.977	
+Epoch eval:
+Average acc: 0.966
+  group =  majority  [n =   5000]:	acc = 0.956
+  group =  minority  [n =   5000]:	acc = 0.977
+Worst-group acc: 0.956
+Validation acc_wg: 0.956
+
+
+Epoch [4]:
+
+Train:
+objective: 0.139
+loss_avg: 0.159
+acc_avg: 0.980
+  group =  majority  [n =    794]:	alpha: 0.279	loss: 0.203	acc: 0.966	
+  group =  minority  [n =    806]:	alpha: 0.721	loss: 0.115	acc: 0.994	
+objective: 0.140
+loss_avg: 0.155
+acc_avg: 0.981
+  group =  majority  [n =    779]:	alpha: 0.279	loss: 0.193	acc: 0.964	
+  group =  minority  [n =    821]:	alpha: 0.721	loss: 0.120	acc: 0.996	
+objective: 0.138
+loss_avg: 0.158
+acc_avg: 0.978
+  group =  majority  [n =    819]:	alpha: 0.281	loss: 0.202	acc: 0.962	
+  group =  minority  [n =    781]:	alpha: 0.719	loss: 0.111	acc: 0.995	
+objective: 0.117
+loss_avg: 0.132
+acc_avg: 0.994
+  group =  majority  [n =    820]:	alpha: 0.282	loss: 0.164	acc: 0.988	
+  group =  minority  [n =    780]:	alpha: 0.718	loss: 0.098	acc: 1.000	
+objective: 0.118
+loss_avg: 0.133
+acc_avg: 0.994
+  group =  majority  [n =    798]:	alpha: 0.278	loss: 0.166	acc: 0.989	
+  group =  minority  [n =    802]:	alpha: 0.722	loss: 0.099	acc: 1.000	
+objective: 0.120
+loss_avg: 0.138
+acc_avg: 0.989
+  group =  majority  [n =    809]:	alpha: 0.278	loss: 0.177	acc: 0.980	
+  group =  minority  [n =    791]:	alpha: 0.722	loss: 0.099	acc: 0.997	
+objective: 0.124
+loss_avg: 0.146
+acc_avg: 0.988
+  group =  majority  [n =    848]:	alpha: 0.278	loss: 0.185	acc: 0.976	
+  group =  minority  [n =    752]:	alpha: 0.722	loss: 0.101	acc: 1.000	
+objective: 0.135
+loss_avg: 0.158
+acc_avg: 0.979
+  group =  majority  [n =    845]:	alpha: 0.282	loss: 0.201	acc: 0.962	
+  group =  minority  [n =    755]:	alpha: 0.718	loss: 0.109	acc: 0.997	
+objective: 0.133
+loss_avg: 0.153
+acc_avg: 0.982
+  group =  majority  [n =    818]:	alpha: 0.287	loss: 0.200	acc: 0.966	
+  group =  minority  [n =    782]:	alpha: 0.713	loss: 0.105	acc: 0.999	
+objective: 0.121
+loss_avg: 0.137
+acc_avg: 0.988
+  group =  majority  [n =    796]:	alpha: 0.287	loss: 0.176	acc: 0.976	
+  group =  minority  [n =    804]:	alpha: 0.713	loss: 0.099	acc: 0.999	
+objective: 0.137
+loss_avg: 0.154
+acc_avg: 0.979
+  group =  majority  [n =    794]:	alpha: 0.288	loss: 0.193	acc: 0.967	
+  group =  minority  [n =    806]:	alpha: 0.712	loss: 0.115	acc: 0.991	
+objective: 0.130
+loss_avg: 0.147
+acc_avg: 0.986
+  group =  majority  [n =    804]:	alpha: 0.287	loss: 0.185	acc: 0.978	
+  group =  minority  [n =    796]:	alpha: 0.713	loss: 0.110	acc: 0.994	
+objective: 0.125
+loss_avg: 0.138
+acc_avg: 0.989
+  group =  majority  [n =    781]:	alpha: 0.286	loss: 0.171	acc: 0.977	
+  group =  minority  [n =    819]:	alpha: 0.714	loss: 0.106	acc: 1.000	
+objective: 0.118
+loss_avg: 0.132
+acc_avg: 0.996
+  group =  majority  [n =    810]:	alpha: 0.283	loss: 0.165	acc: 0.991	
+  group =  minority  [n =    790]:	alpha: 0.717	loss: 0.100	acc: 1.000	
+objective: 0.120
+loss_avg: 0.136
+acc_avg: 0.989
+  group =  majority  [n =    782]:	alpha: 0.280	loss: 0.172	acc: 0.980	
+  group =  minority  [n =    818]:	alpha: 0.720	loss: 0.101	acc: 0.999	
+objective: 0.128
+loss_avg: 0.152
+acc_avg: 0.985
+  group =  majority  [n =    837]:	alpha: 0.281	loss: 0.197	acc: 0.974	
+  group =  minority  [n =    763]:	alpha: 0.719	loss: 0.102	acc: 0.997	
+objective: 0.130
+loss_avg: 0.145
+acc_avg: 0.988
+  group =  majority  [n =    807]:	alpha: 0.282	loss: 0.180	acc: 0.978	
+  group =  minority  [n =    793]:	alpha: 0.718	loss: 0.110	acc: 0.997	
+objective: 0.126
+loss_avg: 0.139
+acc_avg: 0.986
+  group =  majority  [n =    796]:	alpha: 0.279	loss: 0.168	acc: 0.980	
+  group =  minority  [n =    804]:	alpha: 0.721	loss: 0.111	acc: 0.993	
+objective: 0.139
+loss_avg: 0.158
+acc_avg: 0.977
+  group =  majority  [n =    794]:	alpha: 0.280	loss: 0.205	acc: 0.957	
+  group =  minority  [n =    806]:	alpha: 0.720	loss: 0.112	acc: 0.996	
+objective: 0.137
+loss_avg: 0.152
+acc_avg: 0.979
+  group =  majority  [n =    793]:	alpha: 0.282	loss: 0.187	acc: 0.962	
+  group =  minority  [n =    807]:	alpha: 0.718	loss: 0.118	acc: 0.996	
+objective: 0.128
+loss_avg: 0.137
+acc_avg: 0.987
+  group =  majority  [n =    793]:	alpha: 0.278	loss: 0.159	acc: 0.977	
+  group =  minority  [n =    807]:	alpha: 0.723	loss: 0.116	acc: 0.996	
+objective: 0.139
+loss_avg: 0.163
+acc_avg: 0.974
+  group =  majority  [n =    832]:	alpha: 0.277	loss: 0.208	acc: 0.958	
+  group =  minority  [n =    768]:	alpha: 0.723	loss: 0.114	acc: 0.992	
+objective: 0.126
+loss_avg: 0.143
+acc_avg: 0.986
+  group =  majority  [n =    798]:	alpha: 0.280	loss: 0.181	acc: 0.972	
+  group =  minority  [n =    802]:	alpha: 0.721	loss: 0.105	acc: 1.000	
+objective: 0.113
+loss_avg: 0.127
+acc_avg: 0.995
+  group =  majority  [n =    784]:	alpha: 0.278	loss: 0.161	acc: 0.990	
+  group =  minority  [n =    816]:	alpha: 0.722	loss: 0.094	acc: 1.000	
+objective: 0.120
+loss_avg: 0.135
+acc_avg: 0.989
+  group =  majority  [n =    769]:	alpha: 0.275	loss: 0.170	acc: 0.979	
+  group =  minority  [n =    831]:	alpha: 0.725	loss: 0.102	acc: 0.998	
+objective: 0.126
+loss_avg: 0.144
+acc_avg: 0.986
+  group =  majority  [n =    784]:	alpha: 0.277	loss: 0.186	acc: 0.973	
+  group =  minority  [n =    816]:	alpha: 0.723	loss: 0.104	acc: 0.998	
+objective: 0.128
+loss_avg: 0.149
+acc_avg: 0.979
+  group =  majority  [n =    839]:	alpha: 0.280	loss: 0.188	acc: 0.961	
+  group =  minority  [n =    761]:	alpha: 0.720	loss: 0.106	acc: 0.999	
+objective: 0.132
+loss_avg: 0.147
+acc_avg: 0.981
+  group =  majority  [n =    815]:	alpha: 0.281	loss: 0.178	acc: 0.964	
+  group =  minority  [n =    785]:	alpha: 0.719	loss: 0.114	acc: 0.997	
+objective: 0.122
+loss_avg: 0.136
+acc_avg: 0.989
+  group =  majority  [n =    776]:	alpha: 0.278	loss: 0.169	acc: 0.978	
+  group =  minority  [n =    824]:	alpha: 0.722	loss: 0.105	acc: 0.999	
+objective: 0.124
+loss_avg: 0.144
+acc_avg: 0.988
+  group =  majority  [n =    809]:	alpha: 0.278	loss: 0.187	acc: 0.978	
+  group =  minority  [n =    791]:	alpha: 0.722	loss: 0.100	acc: 0.999	
+objective: 0.128
+loss_avg: 0.145
+acc_avg: 0.986
+  group =  majority  [n =    799]:	alpha: 0.279	loss: 0.182	acc: 0.976	
+  group =  minority  [n =    801]:	alpha: 0.721	loss: 0.107	acc: 0.996	
+objective: 0.118
+loss_avg: 0.143
+acc_avg: 0.987
+  group =  majority  [n =    211]:	alpha: 0.280	loss: 0.188	acc: 0.976	
+  group =  minority  [n =    188]:	alpha: 0.720	loss: 0.093	acc: 1.000	
+Epoch eval:
+Average acc: 0.985
+  group =  majority  [n =  25133]:	acc = 0.974
+  group =  minority  [n =  24866]:	acc = 0.997
+Worst-group acc: 0.974
+
+Validation:
+objective: 0.064
+loss_avg: 0.137
+acc_avg: 0.971
+  group =  majority  [n =   5000]:	alpha: 0.998	loss: 0.160	acc: 0.969	
+  group =  minority  [n =   5000]:	alpha: 1.000	loss: 0.115	acc: 0.974	
+Epoch eval:
+Average acc: 0.971
+  group =  majority  [n =   5000]:	acc = 0.969
+  group =  minority  [n =   5000]:	acc = 0.974
+Worst-group acc: 0.969
+Validation acc_wg: 0.969
+
+
+Epoch [5]:
+
+Train:
+objective: 0.126
+loss_avg: 0.145
+acc_avg: 0.984
+  group =  majority  [n =    803]:	alpha: 0.281	loss: 0.186	acc: 0.968	
+  group =  minority  [n =    797]:	alpha: 0.719	loss: 0.103	acc: 1.000	
+objective: 0.125
+loss_avg: 0.145
+acc_avg: 0.984
+  group =  majority  [n =    811]:	alpha: 0.283	loss: 0.187	acc: 0.969	
+  group =  minority  [n =    789]:	alpha: 0.717	loss: 0.101	acc: 1.000	
+objective: 0.133
+loss_avg: 0.153
+acc_avg: 0.981
+  group =  majority  [n =    781]:	alpha: 0.285	loss: 0.197	acc: 0.965	
+  group =  minority  [n =    819]:	alpha: 0.715	loss: 0.110	acc: 0.996	
+objective: 0.133
+loss_avg: 0.147
+acc_avg: 0.986
+  group =  majority  [n =    776]:	alpha: 0.286	loss: 0.181	acc: 0.976	
+  group =  minority  [n =    824]:	alpha: 0.714	loss: 0.114	acc: 0.995	
+objective: 0.127
+loss_avg: 0.143
+acc_avg: 0.986
+  group =  majority  [n =    805]:	alpha: 0.286	loss: 0.178	acc: 0.976	
+  group =  minority  [n =    795]:	alpha: 0.714	loss: 0.107	acc: 0.996	
+objective: 0.132
+loss_avg: 0.150
+acc_avg: 0.981
+  group =  majority  [n =    791]:	alpha: 0.286	loss: 0.193	acc: 0.962	
+  group =  minority  [n =    809]:	alpha: 0.714	loss: 0.107	acc: 0.999	
+objective: 0.123
+loss_avg: 0.135
+acc_avg: 0.991
+  group =  majority  [n =    797]:	alpha: 0.287	loss: 0.164	acc: 0.985	
+  group =  minority  [n =    803]:	alpha: 0.713	loss: 0.107	acc: 0.998	
+objective: 0.123
+loss_avg: 0.137
+acc_avg: 0.989
+  group =  majority  [n =    789]:	alpha: 0.284	loss: 0.170	acc: 0.981	
+  group =  minority  [n =    811]:	alpha: 0.716	loss: 0.104	acc: 0.998	
+objective: 0.129
+loss_avg: 0.147
+acc_avg: 0.982
+  group =  majority  [n =    779]:	alpha: 0.284	loss: 0.192	acc: 0.965	
+  group =  minority  [n =    821]:	alpha: 0.716	loss: 0.105	acc: 0.998	
+objective: 0.138
+loss_avg: 0.157
+acc_avg: 0.974
+  group =  majority  [n =    792]:	alpha: 0.288	loss: 0.203	acc: 0.952	
+  group =  minority  [n =    808]:	alpha: 0.712	loss: 0.113	acc: 0.996	
+objective: 0.117
+loss_avg: 0.130
+acc_avg: 0.993
+  group =  majority  [n =    792]:	alpha: 0.289	loss: 0.161	acc: 0.986	
+  group =  minority  [n =    808]:	alpha: 0.711	loss: 0.099	acc: 0.999	
+objective: 0.128
+loss_avg: 0.145
+acc_avg: 0.984
+  group =  majority  [n =    784]:	alpha: 0.287	loss: 0.186	acc: 0.969	
+  group =  minority  [n =    816]:	alpha: 0.713	loss: 0.106	acc: 0.998	
+objective: 0.121
+loss_avg: 0.135
+acc_avg: 0.989
+  group =  majority  [n =    770]:	alpha: 0.287	loss: 0.172	acc: 0.978	
+  group =  minority  [n =    830]:	alpha: 0.713	loss: 0.101	acc: 1.000	
+objective: 0.124
+loss_avg: 0.137
+acc_avg: 0.989
+  group =  majority  [n =    790]:	alpha: 0.283	loss: 0.167	acc: 0.982	
+  group =  minority  [n =    810]:	alpha: 0.717	loss: 0.108	acc: 0.995	
+objective: 0.135
+loss_avg: 0.151
+acc_avg: 0.977
+  group =  majority  [n =    830]:	alpha: 0.282	loss: 0.186	acc: 0.963	
+  group =  minority  [n =    770]:	alpha: 0.718	loss: 0.114	acc: 0.992	
+objective: 0.134
+loss_avg: 0.154
+acc_avg: 0.979
+  group =  majority  [n =    826]:	alpha: 0.287	loss: 0.197	acc: 0.960	
+  group =  minority  [n =    774]:	alpha: 0.713	loss: 0.109	acc: 0.999	
+objective: 0.129
+loss_avg: 0.145
+acc_avg: 0.983
+  group =  majority  [n =    793]:	alpha: 0.288	loss: 0.182	acc: 0.971	
+  group =  minority  [n =    807]:	alpha: 0.712	loss: 0.109	acc: 0.994	
+objective: 0.134
+loss_avg: 0.153
+acc_avg: 0.980
+  group =  majority  [n =    814]:	alpha: 0.292	loss: 0.196	acc: 0.966	
+  group =  minority  [n =    786]:	alpha: 0.708	loss: 0.108	acc: 0.995	
+objective: 0.138
+loss_avg: 0.153
+acc_avg: 0.979
+  group =  majority  [n =    780]:	alpha: 0.294	loss: 0.193	acc: 0.963	
+  group =  minority  [n =    820]:	alpha: 0.706	loss: 0.114	acc: 0.995	
+objective: 0.121
+loss_avg: 0.133
+acc_avg: 0.991
+  group =  majority  [n =    765]:	alpha: 0.294	loss: 0.166	acc: 0.983	
+  group =  minority  [n =    835]:	alpha: 0.706	loss: 0.103	acc: 0.999	
+objective: 0.119
+loss_avg: 0.133
+acc_avg: 0.989
+  group =  majority  [n =    811]:	alpha: 0.291	loss: 0.163	acc: 0.980	
+  group =  minority  [n =    789]:	alpha: 0.709	loss: 0.102	acc: 0.997	
+objective: 0.122
+loss_avg: 0.139
+acc_avg: 0.985
+  group =  majority  [n =    797]:	alpha: 0.291	loss: 0.178	acc: 0.972	
+  group =  minority  [n =    803]:	alpha: 0.709	loss: 0.100	acc: 0.998	
+objective: 0.126
+loss_avg: 0.142
+acc_avg: 0.983
+  group =  majority  [n =    821]:	alpha: 0.292	loss: 0.176	acc: 0.974	
+  group =  minority  [n =    779]:	alpha: 0.708	loss: 0.106	acc: 0.992	
+objective: 0.140
+loss_avg: 0.157
+acc_avg: 0.978
+  group =  majority  [n =    828]:	alpha: 0.293	loss: 0.194	acc: 0.965	
+  group =  minority  [n =    772]:	alpha: 0.707	loss: 0.118	acc: 0.992	
+objective: 0.146
+loss_avg: 0.161
+acc_avg: 0.972
+  group =  majority  [n =    789]:	alpha: 0.294	loss: 0.198	acc: 0.954	
+  group =  minority  [n =    811]:	alpha: 0.706	loss: 0.125	acc: 0.990	
+objective: 0.138
+loss_avg: 0.163
+acc_avg: 0.971
+  group =  majority  [n =    859]:	alpha: 0.295	loss: 0.208	acc: 0.950	
+  group =  minority  [n =    741]:	alpha: 0.706	loss: 0.110	acc: 0.995	
+objective: 0.141
+loss_avg: 0.161
+acc_avg: 0.977
+  group =  majority  [n =    842]:	alpha: 0.299	loss: 0.202	acc: 0.962	
+  group =  minority  [n =    758]:	alpha: 0.701	loss: 0.116	acc: 0.993	
+objective: 0.123
+loss_avg: 0.136
+acc_avg: 0.988
+  group =  majority  [n =    804]:	alpha: 0.298	loss: 0.168	acc: 0.975	
+  group =  minority  [n =    796]:	alpha: 0.702	loss: 0.104	acc: 1.000	
+objective: 0.120
+loss_avg: 0.135
+acc_avg: 0.991
+  group =  majority  [n =    802]:	alpha: 0.296	loss: 0.168	acc: 0.983	
+  group =  minority  [n =    798]:	alpha: 0.704	loss: 0.101	acc: 0.999	
+objective: 0.124
+loss_avg: 0.135
+acc_avg: 0.989
+  group =  majority  [n =    787]:	alpha: 0.292	loss: 0.162	acc: 0.981	
+  group =  minority  [n =    813]:	alpha: 0.708	loss: 0.108	acc: 0.998	
+objective: 0.132
+loss_avg: 0.150
+acc_avg: 0.979
+  group =  majority  [n =    827]:	alpha: 0.291	loss: 0.189	acc: 0.964	
+  group =  minority  [n =    773]:	alpha: 0.709	loss: 0.108	acc: 0.995	
+objective: 0.129
+loss_avg: 0.147
+acc_avg: 0.982
+  group =  majority  [n =    206]:	alpha: 0.292	loss: 0.184	acc: 0.971	
+  group =  minority  [n =    193]:	alpha: 0.708	loss: 0.108	acc: 0.995	
+Epoch eval:
+Average acc: 0.983
+  group =  majority  [n =  25041]:	acc = 0.970
+  group =  minority  [n =  24958]:	acc = 0.996
+Worst-group acc: 0.970
+
+Validation:
+objective: 0.088
+loss_avg: 0.189
+acc_avg: 0.971
+  group =  majority  [n =   5000]:	alpha: 0.999	loss: 0.219	acc: 0.966	
+  group =  minority  [n =   5000]:	alpha: 1.000	loss: 0.159	acc: 0.977	
+Epoch eval:
+Average acc: 0.971
+  group =  majority  [n =   5000]:	acc = 0.966
+  group =  minority  [n =   5000]:	acc = 0.977
+Worst-group acc: 0.966
+Validation acc_wg: 0.966
+
+
+Epoch [6]:
+
+Train:
+objective: 0.128
+loss_avg: 0.141
+acc_avg: 0.986
+  group =  majority  [n =    771]:	alpha: 0.293	loss: 0.179	acc: 0.973	
+  group =  minority  [n =    829]:	alpha: 0.707	loss: 0.106	acc: 0.999	
+objective: 0.120
+loss_avg: 0.132
+acc_avg: 0.992
+  group =  majority  [n =    804]:	alpha: 0.290	loss: 0.161	acc: 0.988	
+  group =  minority  [n =    796]:	alpha: 0.710	loss: 0.103	acc: 0.996	
+objective: 0.123
+loss_avg: 0.134
+acc_avg: 0.988
+  group =  majority  [n =    775]:	alpha: 0.286	loss: 0.164	acc: 0.978	
+  group =  minority  [n =    825]:	alpha: 0.714	loss: 0.107	acc: 0.998	
+objective: 0.129
+loss_avg: 0.143
+acc_avg: 0.982
+  group =  majority  [n =    793]:	alpha: 0.285	loss: 0.179	acc: 0.967	
+  group =  minority  [n =    807]:	alpha: 0.715	loss: 0.108	acc: 0.996	
+objective: 0.134
+loss_avg: 0.152
+acc_avg: 0.983
+  group =  majority  [n =    788]:	alpha: 0.285	loss: 0.194	acc: 0.970	
+  group =  minority  [n =    812]:	alpha: 0.715	loss: 0.111	acc: 0.995	
+objective: 0.127
+loss_avg: 0.142
+acc_avg: 0.983
+  group =  majority  [n =    797]:	alpha: 0.286	loss: 0.176	acc: 0.971	
+  group =  minority  [n =    803]:	alpha: 0.714	loss: 0.108	acc: 0.995	
+objective: 0.118
+loss_avg: 0.135
+acc_avg: 0.988
+  group =  majority  [n =    803]:	alpha: 0.287	loss: 0.172	acc: 0.975	
+  group =  minority  [n =    797]:	alpha: 0.713	loss: 0.098	acc: 1.000	
+objective: 0.128
+loss_avg: 0.147
+acc_avg: 0.982
+  group =  majority  [n =    822]:	alpha: 0.287	loss: 0.187	acc: 0.970	
+  group =  minority  [n =    778]:	alpha: 0.713	loss: 0.104	acc: 0.995	
+objective: 0.127
+loss_avg: 0.143
+acc_avg: 0.984
+  group =  majority  [n =    819]:	alpha: 0.288	loss: 0.177	acc: 0.972	
+  group =  minority  [n =    781]:	alpha: 0.712	loss: 0.107	acc: 0.997	
+objective: 0.117
+loss_avg: 0.130
+acc_avg: 0.989
+  group =  majority  [n =    789]:	alpha: 0.288	loss: 0.163	acc: 0.978	
+  group =  minority  [n =    811]:	alpha: 0.712	loss: 0.098	acc: 1.000	
+objective: 0.118
+loss_avg: 0.131
+acc_avg: 0.989
+  group =  majority  [n =    775]:	alpha: 0.286	loss: 0.165	acc: 0.981	
+  group =  minority  [n =    825]:	alpha: 0.714	loss: 0.100	acc: 0.998	
+objective: 0.121
+loss_avg: 0.134
+acc_avg: 0.989
+  group =  majority  [n =    782]:	alpha: 0.286	loss: 0.168	acc: 0.982	
+  group =  minority  [n =    818]:	alpha: 0.714	loss: 0.102	acc: 0.996	
+objective: 0.113
+loss_avg: 0.125
+acc_avg: 0.994
+  group =  majority  [n =    781]:	alpha: 0.284	loss: 0.155	acc: 0.987	
+  group =  minority  [n =    819]:	alpha: 0.716	loss: 0.096	acc: 1.000	
+objective: 0.116
+loss_avg: 0.129
+acc_avg: 0.991
+  group =  majority  [n =    806]:	alpha: 0.279	loss: 0.159	acc: 0.984	
+  group =  minority  [n =    794]:	alpha: 0.721	loss: 0.100	acc: 0.997	
+objective: 0.131
+loss_avg: 0.152
+acc_avg: 0.980
+  group =  majority  [n =    798]:	alpha: 0.279	loss: 0.199	acc: 0.961	
+  group =  minority  [n =    802]:	alpha: 0.721	loss: 0.106	acc: 0.999	
+objective: 0.119
+loss_avg: 0.135
+acc_avg: 0.984
+  group =  majority  [n =    821]:	alpha: 0.281	loss: 0.169	acc: 0.972	
+  group =  minority  [n =    779]:	alpha: 0.719	loss: 0.100	acc: 0.997	
+objective: 0.127
+loss_avg: 0.145
+acc_avg: 0.985
+  group =  majority  [n =    809]:	alpha: 0.284	loss: 0.186	acc: 0.972	
+  group =  minority  [n =    791]:	alpha: 0.716	loss: 0.104	acc: 0.999	
+objective: 0.125
+loss_avg: 0.144
+acc_avg: 0.983
+  group =  majority  [n =    808]:	alpha: 0.287	loss: 0.186	acc: 0.970	
+  group =  minority  [n =    792]:	alpha: 0.713	loss: 0.100	acc: 0.996	
+objective: 0.119
+loss_avg: 0.134
+acc_avg: 0.987
+  group =  majority  [n =    783]:	alpha: 0.289	loss: 0.169	acc: 0.974	
+  group =  minority  [n =    817]:	alpha: 0.711	loss: 0.100	acc: 0.999	
+objective: 0.120
+loss_avg: 0.136
+acc_avg: 0.984
+  group =  majority  [n =    803]:	alpha: 0.290	loss: 0.176	acc: 0.970	
+  group =  minority  [n =    797]:	alpha: 0.710	loss: 0.097	acc: 0.997	
+objective: 0.122
+loss_avg: 0.139
+acc_avg: 0.987
+  group =  majority  [n =    803]:	alpha: 0.291	loss: 0.177	acc: 0.974	
+  group =  minority  [n =    797]:	alpha: 0.709	loss: 0.101	acc: 1.000	
+objective: 0.124
+loss_avg: 0.145
+acc_avg: 0.977
+  group =  majority  [n =    851]:	alpha: 0.293	loss: 0.184	acc: 0.966	
+  group =  minority  [n =    749]:	alpha: 0.707	loss: 0.101	acc: 0.991	
+objective: 0.136
+loss_avg: 0.148
+acc_avg: 0.979
+  group =  majority  [n =    787]:	alpha: 0.295	loss: 0.176	acc: 0.968	
+  group =  minority  [n =    813]:	alpha: 0.706	loss: 0.121	acc: 0.990	
+objective: 0.121
+loss_avg: 0.133
+acc_avg: 0.986
+  group =  majority  [n =    784]:	alpha: 0.294	loss: 0.166	acc: 0.972	
+  group =  minority  [n =    816]:	alpha: 0.706	loss: 0.101	acc: 1.000	
+objective: 0.114
+loss_avg: 0.129
+acc_avg: 0.991
+  group =  majority  [n =    826]:	alpha: 0.293	loss: 0.162	acc: 0.984	
+  group =  minority  [n =    774]:	alpha: 0.707	loss: 0.093	acc: 0.999	
+objective: 0.129
+loss_avg: 0.141
+acc_avg: 0.985
+  group =  majority  [n =    763]:	alpha: 0.292	loss: 0.180	acc: 0.971	
+  group =  minority  [n =    837]:	alpha: 0.708	loss: 0.106	acc: 0.998	
+objective: 0.148
+loss_avg: 0.166
+acc_avg: 0.972
+  group =  majority  [n =    810]:	alpha: 0.292	loss: 0.207	acc: 0.957	
+  group =  minority  [n =    790]:	alpha: 0.708	loss: 0.123	acc: 0.989	
+objective: 0.123
+loss_avg: 0.138
+acc_avg: 0.986
+  group =  majority  [n =    806]:	alpha: 0.293	loss: 0.172	acc: 0.974	
+  group =  minority  [n =    794]:	alpha: 0.707	loss: 0.103	acc: 0.999	
+objective: 0.135
+loss_avg: 0.151
+acc_avg: 0.981
+  group =  majority  [n =    802]:	alpha: 0.293	loss: 0.186	acc: 0.969	
+  group =  minority  [n =    798]:	alpha: 0.707	loss: 0.115	acc: 0.994	
+objective: 0.123
+loss_avg: 0.139
+acc_avg: 0.987
+  group =  majority  [n =    819]:	alpha: 0.292	loss: 0.173	acc: 0.978	
+  group =  minority  [n =    781]:	alpha: 0.708	loss: 0.103	acc: 0.996	
+objective: 0.120
+loss_avg: 0.138
+acc_avg: 0.987
+  group =  majority  [n =    844]:	alpha: 0.293	loss: 0.173	acc: 0.977	
+  group =  minority  [n =    756]:	alpha: 0.707	loss: 0.098	acc: 0.999	
+objective: 0.119
+loss_avg: 0.137
+acc_avg: 0.982
+  group =  majority  [n =    191]:	alpha: 0.294	loss: 0.185	acc: 0.963	
+  group =  minority  [n =    208]:	alpha: 0.706	loss: 0.092	acc: 1.000	
+Epoch eval:
+Average acc: 0.985
+  group =  majority  [n =  25013]:	acc = 0.974
+  group =  minority  [n =  24986]:	acc = 0.997
+Worst-group acc: 0.974
+
+Validation:
+objective: 0.079
+loss_avg: 0.162
+acc_avg: 0.984
+  group =  majority  [n =   5000]:	alpha: 0.999	loss: 0.172	acc: 0.984	
+  group =  minority  [n =   5000]:	alpha: 1.000	loss: 0.151	acc: 0.984	
+Epoch eval:
+Average acc: 0.984
+  group =  majority  [n =   5000]:	acc = 0.984
+  group =  minority  [n =   5000]:	acc = 0.984
+Worst-group acc: 0.984
+Validation acc_wg: 0.984
+Epoch 6 has the best validation performance so far.
+
+
+Epoch [7]:
+
+Train:
+objective: 0.131
+loss_avg: 0.146
+acc_avg: 0.983
+  group =  majority  [n =    779]:	alpha: 0.296	loss: 0.185	acc: 0.973	
+  group =  minority  [n =    821]:	alpha: 0.704	loss: 0.109	acc: 0.993	
+objective: 0.119
+loss_avg: 0.135
+acc_avg: 0.987
+  group =  majority  [n =    811]:	alpha: 0.295	loss: 0.172	acc: 0.977	
+  group =  minority  [n =    789]:	alpha: 0.705	loss: 0.097	acc: 0.997	
+objective: 0.134
+loss_avg: 0.147
+acc_avg: 0.982
+  group =  majority  [n =    778]:	alpha: 0.295	loss: 0.182	acc: 0.967	
+  group =  minority  [n =    822]:	alpha: 0.705	loss: 0.113	acc: 0.996	
+objective: 0.129
+loss_avg: 0.140
+acc_avg: 0.985
+  group =  majority  [n =    791]:	alpha: 0.296	loss: 0.169	acc: 0.973	
+  group =  minority  [n =    809]:	alpha: 0.704	loss: 0.111	acc: 0.996	
+objective: 0.118
+loss_avg: 0.132
+acc_avg: 0.991
+  group =  majority  [n =    800]:	alpha: 0.295	loss: 0.166	acc: 0.984	
+  group =  minority  [n =    800]:	alpha: 0.705	loss: 0.098	acc: 0.999	
+objective: 0.113
+loss_avg: 0.127
+acc_avg: 0.992
+  group =  majority  [n =    809]:	alpha: 0.294	loss: 0.159	acc: 0.986	
+  group =  minority  [n =    791]:	alpha: 0.706	loss: 0.095	acc: 0.999	
+objective: 0.112
+loss_avg: 0.123
+acc_avg: 0.993
+  group =  majority  [n =    779]:	alpha: 0.290	loss: 0.152	acc: 0.987	
+  group =  minority  [n =    821]:	alpha: 0.710	loss: 0.096	acc: 0.999	
+objective: 0.122
+loss_avg: 0.135
+acc_avg: 0.986
+  group =  majority  [n =    775]:	alpha: 0.289	loss: 0.169	acc: 0.975	
+  group =  minority  [n =    825]:	alpha: 0.711	loss: 0.103	acc: 0.996	
+objective: 0.118
+loss_avg: 0.132
+acc_avg: 0.989
+  group =  majority  [n =    805]:	alpha: 0.287	loss: 0.162	acc: 0.981	
+  group =  minority  [n =    795]:	alpha: 0.713	loss: 0.101	acc: 0.996	
+objective: 0.121
+loss_avg: 0.138
+acc_avg: 0.988
+  group =  majority  [n =    836]:	alpha: 0.285	loss: 0.171	acc: 0.981	
+  group =  minority  [n =    764]:	alpha: 0.715	loss: 0.102	acc: 0.996	
+objective: 0.136
+loss_avg: 0.157
+acc_avg: 0.975
+  group =  majority  [n =    835]:	alpha: 0.288	loss: 0.196	acc: 0.957	
+  group =  minority  [n =    765]:	alpha: 0.712	loss: 0.114	acc: 0.995	
+objective: 0.132
+loss_avg: 0.145
+acc_avg: 0.979
+  group =  majority  [n =    757]:	alpha: 0.290	loss: 0.185	acc: 0.959	
+  group =  minority  [n =    843]:	alpha: 0.710	loss: 0.110	acc: 0.996	
+objective: 0.123
+loss_avg: 0.139
+acc_avg: 0.986
+  group =  majority  [n =    795]:	alpha: 0.292	loss: 0.176	acc: 0.972	
+  group =  minority  [n =    805]:	alpha: 0.708	loss: 0.102	acc: 1.000	
+objective: 0.120
+loss_avg: 0.132
+acc_avg: 0.989
+  group =  majority  [n =    766]:	alpha: 0.291	loss: 0.168	acc: 0.978	
+  group =  minority  [n =    834]:	alpha: 0.709	loss: 0.099	acc: 0.999	
+objective: 0.119
+loss_avg: 0.128
+acc_avg: 0.987
+  group =  majority  [n =    778]:	alpha: 0.288	loss: 0.150	acc: 0.979	
+  group =  minority  [n =    822]:	alpha: 0.712	loss: 0.108	acc: 0.994	
+objective: 0.138
+loss_avg: 0.160
+acc_avg: 0.975
+  group =  majority  [n =    834]:	alpha: 0.290	loss: 0.207	acc: 0.957	
+  group =  minority  [n =    766]:	alpha: 0.710	loss: 0.110	acc: 0.995	
+objective: 0.122
+loss_avg: 0.138
+acc_avg: 0.985
+  group =  majority  [n =    804]:	alpha: 0.296	loss: 0.176	acc: 0.973	
+  group =  minority  [n =    796]:	alpha: 0.704	loss: 0.100	acc: 0.997	
+objective: 0.117
+loss_avg: 0.130
+acc_avg: 0.989
+  group =  majority  [n =    818]:	alpha: 0.296	loss: 0.160	acc: 0.980	
+  group =  minority  [n =    782]:	alpha: 0.704	loss: 0.098	acc: 0.999	
+objective: 0.118
+loss_avg: 0.131
+acc_avg: 0.990
+  group =  majority  [n =    799]:	alpha: 0.295	loss: 0.161	acc: 0.980	
+  group =  minority  [n =    801]:	alpha: 0.705	loss: 0.101	acc: 1.000	
+objective: 0.116
+loss_avg: 0.131
+acc_avg: 0.988
+  group =  majority  [n =    818]:	alpha: 0.295	loss: 0.162	acc: 0.976	
+  group =  minority  [n =    782]:	alpha: 0.705	loss: 0.097	acc: 1.000	
+objective: 0.125
+loss_avg: 0.142
+acc_avg: 0.984
+  group =  majority  [n =    832]:	alpha: 0.295	loss: 0.178	acc: 0.972	
+  group =  minority  [n =    768]:	alpha: 0.705	loss: 0.103	acc: 0.997	
+objective: 0.123
+loss_avg: 0.138
+acc_avg: 0.983
+  group =  majority  [n =    846]:	alpha: 0.297	loss: 0.169	acc: 0.972	
+  group =  minority  [n =    754]:	alpha: 0.703	loss: 0.103	acc: 0.995	
+objective: 0.125
+loss_avg: 0.139
+acc_avg: 0.986
+  group =  majority  [n =    813]:	alpha: 0.297	loss: 0.171	acc: 0.975	
+  group =  minority  [n =    787]:	alpha: 0.703	loss: 0.105	acc: 0.996	
+objective: 0.121
+loss_avg: 0.135
+acc_avg: 0.985
+  group =  majority  [n =    769]:	alpha: 0.297	loss: 0.172	acc: 0.970	
+  group =  minority  [n =    831]:	alpha: 0.703	loss: 0.100	acc: 0.999	
+objective: 0.121
+loss_avg: 0.134
+acc_avg: 0.984
+  group =  majority  [n =    792]:	alpha: 0.297	loss: 0.165	acc: 0.972	
+  group =  minority  [n =    808]:	alpha: 0.703	loss: 0.104	acc: 0.995	
+objective: 0.125
+loss_avg: 0.136
+acc_avg: 0.986
+  group =  majority  [n =    775]:	alpha: 0.296	loss: 0.166	acc: 0.972	
+  group =  minority  [n =    825]:	alpha: 0.704	loss: 0.108	acc: 1.000	
+objective: 0.118
+loss_avg: 0.129
+acc_avg: 0.986
+  group =  majority  [n =    783]:	alpha: 0.295	loss: 0.159	acc: 0.973	
+  group =  minority  [n =    817]:	alpha: 0.705	loss: 0.101	acc: 0.999	
+objective: 0.124
+loss_avg: 0.141
+acc_avg: 0.981
+  group =  majority  [n =    810]:	alpha: 0.296	loss: 0.182	acc: 0.964	
+  group =  minority  [n =    790]:	alpha: 0.704	loss: 0.099	acc: 0.997	
+objective: 0.135
+loss_avg: 0.145
+acc_avg: 0.979
+  group =  majority  [n =    791]:	alpha: 0.297	loss: 0.169	acc: 0.970	
+  group =  minority  [n =    809]:	alpha: 0.703	loss: 0.120	acc: 0.988	
+objective: 0.143
+loss_avg: 0.161
+acc_avg: 0.971
+  group =  majority  [n =    795]:	alpha: 0.298	loss: 0.205	acc: 0.951	
+  group =  minority  [n =    805]:	alpha: 0.702	loss: 0.118	acc: 0.991	
+objective: 0.117
+loss_avg: 0.129
+acc_avg: 0.988
+  group =  majority  [n =    792]:	alpha: 0.298	loss: 0.159	acc: 0.976	
+  group =  minority  [n =    808]:	alpha: 0.702	loss: 0.099	acc: 0.999	
+objective: 0.108
+loss_avg: 0.120
+acc_avg: 0.990
+  group =  majority  [n =    201]:	alpha: 0.296	loss: 0.147	acc: 0.985	
+  group =  minority  [n =    198]:	alpha: 0.704	loss: 0.093	acc: 0.995	
+Epoch eval:
+Average acc: 0.985
+  group =  majority  [n =  24966]:	acc = 0.973
+  group =  minority  [n =  25033]:	acc = 0.997
+Worst-group acc: 0.973
+
+Validation:
+objective: 0.096
+loss_avg: 0.194
+acc_avg: 0.970
+  group =  majority  [n =   5000]:	alpha: 1.000	loss: 0.200	acc: 0.977	
+  group =  minority  [n =   5000]:	alpha: 0.997	loss: 0.187	acc: 0.963	
+Epoch eval:
+Average acc: 0.970
+  group =  majority  [n =   5000]:	acc = 0.977
+  group =  minority  [n =   5000]:	acc = 0.963
+Worst-group acc: 0.963
+Validation acc_wg: 0.963
+
+
+Epoch [8]:
+
+Train:
+objective: 0.119
+loss_avg: 0.134
+acc_avg: 0.988
+  group =  majority  [n =    797]:	alpha: 0.295	loss: 0.170	acc: 0.981	
+  group =  minority  [n =    803]:	alpha: 0.705	loss: 0.099	acc: 0.995	
+objective: 0.126
+loss_avg: 0.144
+acc_avg: 0.980
+  group =  majority  [n =    807]:	alpha: 0.296	loss: 0.187	acc: 0.965	
+  group =  minority  [n =    793]:	alpha: 0.704	loss: 0.099	acc: 0.995	
+objective: 0.125
+loss_avg: 0.137
+acc_avg: 0.986
+  group =  majority  [n =    759]:	alpha: 0.298	loss: 0.173	acc: 0.971	
+  group =  minority  [n =    841]:	alpha: 0.702	loss: 0.105	acc: 1.000	
+objective: 0.119
+loss_avg: 0.132
+acc_avg: 0.987
+  group =  majority  [n =    796]:	alpha: 0.298	loss: 0.165	acc: 0.976	
+  group =  minority  [n =    804]:	alpha: 0.701	loss: 0.099	acc: 0.998	
+objective: 0.106
+loss_avg: 0.114
+acc_avg: 0.993
+  group =  majority  [n =    785]:	alpha: 0.296	loss: 0.138	acc: 0.986	
+  group =  minority  [n =    815]:	alpha: 0.704	loss: 0.091	acc: 1.000	
+objective: 0.114
+loss_avg: 0.123
+acc_avg: 0.991
+  group =  majority  [n =    783]:	alpha: 0.293	loss: 0.151	acc: 0.982	
+  group =  minority  [n =    817]:	alpha: 0.707	loss: 0.097	acc: 1.000	
+objective: 0.114
+loss_avg: 0.127
+acc_avg: 0.987
+  group =  majority  [n =    787]:	alpha: 0.293	loss: 0.161	acc: 0.976	
+  group =  minority  [n =    813]:	alpha: 0.707	loss: 0.095	acc: 0.998	
+objective: 0.116
+loss_avg: 0.131
+acc_avg: 0.986
+  group =  majority  [n =    788]:	alpha: 0.294	loss: 0.164	acc: 0.973	
+  group =  minority  [n =    812]:	alpha: 0.706	loss: 0.099	acc: 0.998	
+objective: 0.115
+loss_avg: 0.127
+acc_avg: 0.988
+  group =  majority  [n =    769]:	alpha: 0.293	loss: 0.158	acc: 0.978	
+  group =  minority  [n =    831]:	alpha: 0.707	loss: 0.098	acc: 0.996	
+objective: 0.115
+loss_avg: 0.130
+acc_avg: 0.988
+  group =  majority  [n =    805]:	alpha: 0.291	loss: 0.164	acc: 0.976	
+  group =  minority  [n =    795]:	alpha: 0.709	loss: 0.096	acc: 0.999	
+objective: 0.107
+loss_avg: 0.118
+acc_avg: 0.994
+  group =  majority  [n =    784]:	alpha: 0.289	loss: 0.146	acc: 0.989	
+  group =  minority  [n =    816]:	alpha: 0.711	loss: 0.091	acc: 1.000	
+objective: 0.115
+loss_avg: 0.130
+acc_avg: 0.989
+  group =  majority  [n =    804]:	alpha: 0.288	loss: 0.163	acc: 0.978	
+  group =  minority  [n =    796]:	alpha: 0.712	loss: 0.096	acc: 1.000	
+objective: 0.117
+loss_avg: 0.130
+acc_avg: 0.986
+  group =  majority  [n =    779]:	alpha: 0.290	loss: 0.167	acc: 0.972	
+  group =  minority  [n =    821]:	alpha: 0.710	loss: 0.094	acc: 0.999	
+objective: 0.130
+loss_avg: 0.147
+acc_avg: 0.977
+  group =  majority  [n =    783]:	alpha: 0.295	loss: 0.188	acc: 0.962	
+  group =  minority  [n =    817]:	alpha: 0.705	loss: 0.107	acc: 0.991	
+objective: 0.124
+loss_avg: 0.140
+acc_avg: 0.984
+  group =  majority  [n =    840]:	alpha: 0.297	loss: 0.172	acc: 0.973	
+  group =  minority  [n =    760]:	alpha: 0.703	loss: 0.104	acc: 0.996	
+objective: 0.127
+loss_avg: 0.141
+acc_avg: 0.981
+  group =  majority  [n =    794]:	alpha: 0.299	loss: 0.178	acc: 0.963	
+  group =  minority  [n =    806]:	alpha: 0.701	loss: 0.104	acc: 0.999	
+objective: 0.111
+loss_avg: 0.124
+acc_avg: 0.989
+  group =  majority  [n =    821]:	alpha: 0.300	loss: 0.152	acc: 0.978	
+  group =  minority  [n =    779]:	alpha: 0.700	loss: 0.093	acc: 1.000	
+objective: 0.109
+loss_avg: 0.122
+acc_avg: 0.992
+  group =  majority  [n =    819]:	alpha: 0.298	loss: 0.150	acc: 0.987	
+  group =  minority  [n =    781]:	alpha: 0.702	loss: 0.093	acc: 0.997	
+objective: 0.121
+loss_avg: 0.136
+acc_avg: 0.984
+  group =  majority  [n =    799]:	alpha: 0.299	loss: 0.173	acc: 0.971	
+  group =  minority  [n =    801]:	alpha: 0.701	loss: 0.099	acc: 0.998	
+objective: 0.119
+loss_avg: 0.134
+acc_avg: 0.982
+  group =  majority  [n =    821]:	alpha: 0.300	loss: 0.169	acc: 0.970	
+  group =  minority  [n =    779]:	alpha: 0.700	loss: 0.098	acc: 0.996	
+objective: 0.121
+loss_avg: 0.134
+acc_avg: 0.986
+  group =  majority  [n =    786]:	alpha: 0.300	loss: 0.167	acc: 0.972	
+  group =  minority  [n =    814]:	alpha: 0.700	loss: 0.101	acc: 0.999	
+objective: 0.124
+loss_avg: 0.134
+acc_avg: 0.983
+  group =  majority  [n =    801]:	alpha: 0.300	loss: 0.162	acc: 0.970	
+  group =  minority  [n =    799]:	alpha: 0.700	loss: 0.107	acc: 0.996	
+objective: 0.132
+loss_avg: 0.148
+acc_avg: 0.981
+  group =  majority  [n =    811]:	alpha: 0.301	loss: 0.187	acc: 0.967	
+  group =  minority  [n =    789]:	alpha: 0.699	loss: 0.107	acc: 0.995	
+objective: 0.114
+loss_avg: 0.122
+acc_avg: 0.989
+  group =  majority  [n =    799]:	alpha: 0.300	loss: 0.144	acc: 0.981	
+  group =  minority  [n =    801]:	alpha: 0.700	loss: 0.101	acc: 0.998	
+objective: 0.111
+loss_avg: 0.123
+acc_avg: 0.988
+  group =  majority  [n =    790]:	alpha: 0.298	loss: 0.154	acc: 0.975	
+  group =  minority  [n =    810]:	alpha: 0.702	loss: 0.092	acc: 1.000	
+objective: 0.110
+loss_avg: 0.121
+acc_avg: 0.988
+  group =  majority  [n =    781]:	alpha: 0.297	loss: 0.150	acc: 0.977	
+  group =  minority  [n =    819]:	alpha: 0.703	loss: 0.094	acc: 0.998	
+objective: 0.118
+loss_avg: 0.130
+acc_avg: 0.987
+  group =  majority  [n =    775]:	alpha: 0.296	loss: 0.165	acc: 0.975	
+  group =  minority  [n =    825]:	alpha: 0.704	loss: 0.097	acc: 0.998	
+objective: 0.117
+loss_avg: 0.134
+acc_avg: 0.981
+  group =  majority  [n =    841]:	alpha: 0.297	loss: 0.167	acc: 0.967	
+  group =  minority  [n =    759]:	alpha: 0.703	loss: 0.097	acc: 0.997	
+objective: 0.116
+loss_avg: 0.128
+acc_avg: 0.986
+  group =  majority  [n =    807]:	alpha: 0.298	loss: 0.158	acc: 0.975	
+  group =  minority  [n =    793]:	alpha: 0.702	loss: 0.098	acc: 0.997	
+objective: 0.113
+loss_avg: 0.125
+acc_avg: 0.990
+  group =  majority  [n =    787]:	alpha: 0.296	loss: 0.154	acc: 0.981	
+  group =  minority  [n =    813]:	alpha: 0.704	loss: 0.096	acc: 0.999	
+objective: 0.121
+loss_avg: 0.134
+acc_avg: 0.985
+  group =  majority  [n =    784]:	alpha: 0.296	loss: 0.169	acc: 0.972	
+  group =  minority  [n =    816]:	alpha: 0.704	loss: 0.100	acc: 0.998	
+objective: 0.123
+loss_avg: 0.134
+acc_avg: 0.985
+  group =  majority  [n =    198]:	alpha: 0.297	loss: 0.154	acc: 0.980	
+  group =  minority  [n =    201]:	alpha: 0.703	loss: 0.113	acc: 0.990	
+Epoch eval:
+Average acc: 0.986
+  group =  majority  [n =  24880]:	acc = 0.975
+  group =  minority  [n =  25119]:	acc = 0.998
+Worst-group acc: 0.975
+
+Validation:
+objective: 0.083
+loss_avg: 0.166
+acc_avg: 0.973
+  group =  majority  [n =   5000]:	alpha: 0.999	loss: 0.169	acc: 0.973	
+  group =  minority  [n =   5000]:	alpha: 1.000	loss: 0.163	acc: 0.973	
+Epoch eval:
+Average acc: 0.973
+  group =  majority  [n =   5000]:	acc = 0.973
+  group =  minority  [n =   5000]:	acc = 0.973
+Worst-group acc: 0.973
+Validation acc_wg: 0.973
+
+
+Epoch [9]:
+
+Train:
+objective: 0.115
+loss_avg: 0.127
+acc_avg: 0.986
+  group =  majority  [n =    833]:	alpha: 0.295	loss: 0.153	acc: 0.978	
+  group =  minority  [n =    767]:	alpha: 0.705	loss: 0.099	acc: 0.995	
+objective: 0.115
+loss_avg: 0.129
+acc_avg: 0.986
+  group =  majority  [n =    813]:	alpha: 0.296	loss: 0.161	acc: 0.974	
+  group =  minority  [n =    787]:	alpha: 0.704	loss: 0.095	acc: 0.999	
+objective: 0.131
+loss_avg: 0.154
+acc_avg: 0.974
+  group =  majority  [n =    835]:	alpha: 0.300	loss: 0.202	acc: 0.953	
+  group =  minority  [n =    765]:	alpha: 0.700	loss: 0.101	acc: 0.996	
+objective: 0.124
+loss_avg: 0.136
+acc_avg: 0.982
+  group =  majority  [n =    799]:	alpha: 0.304	loss: 0.167	acc: 0.970	
+  group =  minority  [n =    801]:	alpha: 0.696	loss: 0.104	acc: 0.994	
+objective: 0.123
+loss_avg: 0.136
+acc_avg: 0.981
+  group =  majority  [n =    812]:	alpha: 0.305	loss: 0.170	acc: 0.966	
+  group =  minority  [n =    788]:	alpha: 0.695	loss: 0.102	acc: 0.997	
+objective: 0.126
+loss_avg: 0.137
+acc_avg: 0.984
+  group =  majority  [n =    789]:	alpha: 0.305	loss: 0.166	acc: 0.972	
+  group =  minority  [n =    811]:	alpha: 0.695	loss: 0.109	acc: 0.996	
+objective: 0.131
+loss_avg: 0.144
+acc_avg: 0.977
+  group =  majority  [n =    802]:	alpha: 0.305	loss: 0.176	acc: 0.960	
+  group =  minority  [n =    798]:	alpha: 0.695	loss: 0.112	acc: 0.995	
+objective: 0.114
+loss_avg: 0.124
+acc_avg: 0.986
+  group =  majority  [n =    781]:	alpha: 0.304	loss: 0.151	acc: 0.972	
+  group =  minority  [n =    819]:	alpha: 0.696	loss: 0.098	acc: 1.000	
+objective: 0.116
+loss_avg: 0.125
+acc_avg: 0.988
+  group =  majority  [n =    781]:	alpha: 0.302	loss: 0.146	acc: 0.980	
+  group =  minority  [n =    819]:	alpha: 0.698	loss: 0.104	acc: 0.995	
+objective: 0.106
+loss_avg: 0.116
+acc_avg: 0.991
+  group =  majority  [n =    784]:	alpha: 0.299	loss: 0.142	acc: 0.982	
+  group =  minority  [n =    816]:	alpha: 0.701	loss: 0.091	acc: 0.999	
+objective: 0.113
+loss_avg: 0.126
+acc_avg: 0.989
+  group =  majority  [n =    800]:	alpha: 0.296	loss: 0.155	acc: 0.980	
+  group =  minority  [n =    800]:	alpha: 0.704	loss: 0.096	acc: 0.999	
+objective: 0.102
+loss_avg: 0.117
+acc_avg: 0.989
+  group =  majority  [n =    836]:	alpha: 0.295	loss: 0.148	acc: 0.980	
+  group =  minority  [n =    764]:	alpha: 0.705	loss: 0.084	acc: 1.000	
+objective: 0.113
+loss_avg: 0.125
+acc_avg: 0.986
+  group =  majority  [n =    793]:	alpha: 0.296	loss: 0.154	acc: 0.974	
+  group =  minority  [n =    807]:	alpha: 0.704	loss: 0.096	acc: 0.998	
+objective: 0.116
+loss_avg: 0.129
+acc_avg: 0.986
+  group =  majority  [n =    804]:	alpha: 0.296	loss: 0.161	acc: 0.974	
+  group =  minority  [n =    796]:	alpha: 0.704	loss: 0.097	acc: 0.997	
+objective: 0.111
+loss_avg: 0.127
+acc_avg: 0.986
+  group =  majority  [n =    838]:	alpha: 0.297	loss: 0.162	acc: 0.974	
+  group =  minority  [n =    762]:	alpha: 0.703	loss: 0.089	acc: 1.000	
+objective: 0.111
+loss_avg: 0.123
+acc_avg: 0.990
+  group =  majority  [n =    808]:	alpha: 0.298	loss: 0.153	acc: 0.983	
+  group =  minority  [n =    792]:	alpha: 0.702	loss: 0.093	acc: 0.997	
+objective: 0.128
+loss_avg: 0.139
+acc_avg: 0.983
+  group =  majority  [n =    793]:	alpha: 0.297	loss: 0.167	acc: 0.972	
+  group =  minority  [n =    807]:	alpha: 0.703	loss: 0.112	acc: 0.994	
+objective: 0.114
+loss_avg: 0.126
+acc_avg: 0.987
+  group =  majority  [n =    790]:	alpha: 0.296	loss: 0.159	acc: 0.975	
+  group =  minority  [n =    810]:	alpha: 0.704	loss: 0.094	acc: 0.999	
+objective: 0.103
+loss_avg: 0.114
+acc_avg: 0.991
+  group =  majority  [n =    813]:	alpha: 0.297	loss: 0.140	acc: 0.983	
+  group =  minority  [n =    787]:	alpha: 0.703	loss: 0.088	acc: 1.000	
+objective: 0.108
+loss_avg: 0.121
+acc_avg: 0.989
+  group =  majority  [n =    803]:	alpha: 0.296	loss: 0.153	acc: 0.979	
+  group =  minority  [n =    797]:	alpha: 0.704	loss: 0.089	acc: 0.999	
+objective: 0.116
+loss_avg: 0.128
+acc_avg: 0.988
+  group =  majority  [n =    805]:	alpha: 0.297	loss: 0.158	acc: 0.979	
+  group =  minority  [n =    795]:	alpha: 0.703	loss: 0.098	acc: 0.997	
+objective: 0.105
+loss_avg: 0.117
+acc_avg: 0.991
+  group =  majority  [n =    799]:	alpha: 0.295	loss: 0.146	acc: 0.982	
+  group =  minority  [n =    801]:	alpha: 0.705	loss: 0.089	acc: 0.999	
+objective: 0.111
+loss_avg: 0.123
+acc_avg: 0.986
+  group =  majority  [n =    807]:	alpha: 0.295	loss: 0.153	acc: 0.978	
+  group =  minority  [n =    793]:	alpha: 0.705	loss: 0.094	acc: 0.995	
+objective: 0.106
+loss_avg: 0.119
+acc_avg: 0.986
+  group =  majority  [n =    800]:	alpha: 0.295	loss: 0.150	acc: 0.975	
+  group =  minority  [n =    800]:	alpha: 0.705	loss: 0.089	acc: 0.998	
+objective: 0.112
+loss_avg: 0.129
+acc_avg: 0.986
+  group =  majority  [n =    819]:	alpha: 0.296	loss: 0.166	acc: 0.974	
+  group =  minority  [n =    781]:	alpha: 0.704	loss: 0.090	acc: 0.999	
+objective: 0.108
+loss_avg: 0.120
+acc_avg: 0.988
+  group =  majority  [n =    779]:	alpha: 0.298	loss: 0.152	acc: 0.976	
+  group =  minority  [n =    821]:	alpha: 0.702	loss: 0.090	acc: 1.000	
+objective: 0.121
+loss_avg: 0.135
+acc_avg: 0.983
+  group =  majority  [n =    792]:	alpha: 0.298	loss: 0.172	acc: 0.967	
+  group =  minority  [n =    808]:	alpha: 0.702	loss: 0.099	acc: 0.998	
+objective: 0.109
+loss_avg: 0.119
+acc_avg: 0.988
+  group =  majority  [n =    775]:	alpha: 0.298	loss: 0.147	acc: 0.974	
+  group =  minority  [n =    825]:	alpha: 0.702	loss: 0.092	acc: 1.000	
+objective: 0.119
+loss_avg: 0.133
+acc_avg: 0.979
+  group =  majority  [n =    776]:	alpha: 0.299	loss: 0.168	acc: 0.963	
+  group =  minority  [n =    824]:	alpha: 0.701	loss: 0.099	acc: 0.995	
+objective: 0.117
+loss_avg: 0.126
+acc_avg: 0.988
+  group =  majority  [n =    777]:	alpha: 0.298	loss: 0.156	acc: 0.976	
+  group =  minority  [n =    823]:	alpha: 0.702	loss: 0.099	acc: 0.999	
+objective: 0.124
+loss_avg: 0.137
+acc_avg: 0.979
+  group =  majority  [n =    817]:	alpha: 0.299	loss: 0.171	acc: 0.966	
+  group =  minority  [n =    783]:	alpha: 0.701	loss: 0.102	acc: 0.994	
+objective: 0.119
+loss_avg: 0.129
+acc_avg: 0.987
+  group =  majority  [n =    186]:	alpha: 0.300	loss: 0.159	acc: 0.978	
+  group =  minority  [n =    213]:	alpha: 0.700	loss: 0.102	acc: 0.995	
+Epoch eval:
+Average acc: 0.986
+  group =  majority  [n =  25039]:	acc = 0.974
+  group =  minority  [n =  24960]:	acc = 0.997
+Worst-group acc: 0.974
+
+Validation:
+objective: 0.087
+loss_avg: 0.173
+acc_avg: 0.965
+  group =  majority  [n =   5000]:	alpha: 1.000	loss: 0.174	acc: 0.968	
+  group =  minority  [n =   5000]:	alpha: 1.000	loss: 0.173	acc: 0.962	
+Epoch eval:
+Average acc: 0.965
+  group =  majority  [n =   5000]:	acc = 0.968
+  group =  minority  [n =   5000]:	acc = 0.962
+Worst-group acc: 0.962
+Validation acc_wg: 0.962
+
